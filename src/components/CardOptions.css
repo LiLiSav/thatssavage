@@ -1,0 +1,137 @@
+.page-container {
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.react-card-flipper{
+    padding: 10px;
+}
+
+.cards-container {
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.card-items {
+    height: 350px;
+    width: 350px;
+    background-color: tomato;
+    margin: 8px;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.6);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.06));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.06));
+}
+    .card-items:hover {
+        cursor: pointer;
+    }
+
+.dgry {
+    background-color: #343a40;
+    color: #f5be27;
+}
+
+.yllw {
+    background-color: #f5be27;
+    color: black;
+}
+
+.lgry {
+    background-color: #b8b4a9;
+    color: black;
+}
+
+.wht {
+    background-color: antiquewhite;
+    color: #f5be27;
+}
+
+.card-fig {
+    padding: 10px;
+    position: relative;
+    color: inherit;
+}
+
+    .card-fig::after {
+        content: attr(data-category);
+        position: absolute;
+        bottom: 0;
+        margin-left: 20px;
+        padding: 10px 14px;
+        max-width: calc((100%) - 60px);
+        font-size: 16px;
+        font-weight: 900;
+        color: inherit;
+        background-color: inherit;
+        box-sizing: border-box;
+        border-radius: 5%;
+    }
+
+.card-pic {
+    display: block;
+    max-width: 100%;
+    transition: all 0.2s linear;
+    border-radius: 5%;
+}
+
+    .card-pic:hover {
+        transform: scale(1.1);
+    }
+
+.back-card-pic {
+    display: block;
+    max-width: 100%;
+    transition: all 0.2s linear;
+    border-radius: 5%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.back-card-block {
+    position: relative;
+}
+
+.card-text {
+    display: block;
+    max-width: 100%;
+    border-radius: 5%;
+    color: inherit;
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    list-style-type: disc;
+}
+
+@media screen and (max-width: 960px) {
+    .card-items {
+        height: 420px;
+        width: 420px;
+    }
+
+    .cards-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .card-items {
+        height: 400px;
+        width: 400px;
+    }
+
+    .cards-container {
+        width: 99%;
+    }
+}

@@ -1,0 +1,87 @@
+.footer-container {
+    padding-top: 10px;
+    background: #343a40;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-header {
+    color: #f5be27;
+}
+
+.footer-text {
+    color: white;
+}
+
+.footer-row {
+    margin: 0 50px;
+}
+
+.footer-footer {
+    margin: 0 10vh;
+    border-color: darkslategray;
+    border-top: solid 1px;
+    height: auto;
+    text-align: right;
+}
+
+.link-text {
+    color: inherit;
+}
+
+.link-text:hover {
+    color: hotpink;
+}
+
+@media screen and (max-width: 960px) {
+    .footer-row {
+        max-width: 125px;
+        margin: 0 20px;
+    }
+
+    .footer-row.flat {
+        width: auto;
+    }
+}
+
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+    .btn-- {
+        color: white;
+        border: none;
+        width: 80px;
+        height: 80px;
+        margin: 3px;
+        border-radius: 50%;
+    }
+
+    .btn-f {
+        background-color: #3b5998;
+    }
+
+    .btn-i {
+        background-color: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+
+    .btn-l {
+        background-color: #0976b4;
+    }
+
+    .btn--:hover {
+        opacity: 0.5;
+    }
