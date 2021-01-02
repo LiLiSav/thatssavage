@@ -9,6 +9,9 @@ export default function CardOptions(props) {
         setIsFlipped(!isFlipped);
     };
 
+    const listTexts = props.listText;
+    const listItems = listTexts.map((listText) => <li>{listText}</li>);
+
     return (
             <li>
                 <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal" >
@@ -19,18 +22,22 @@ export default function CardOptions(props) {
                 </div>
                         
                 <div className={`card-items ${props.bgColour}`} onClick={handleClick}>
-                        <div className="back-card-block">
-                            <ul className="card-text">
-                                <li>{props.text1}</li>
-                                <li>{props.text2}</li>
-                                <li>{props.text3}</li>
-                                <li>{props.text4}</li>
-                            </ul>
-                            <img src={props.src} alt={props.alt} className="back-card-pic" />
+                    <div className="back-card-block">
+                        <ul className="card-text">
+                            {listTexts.map((listTexts) => <li>{listTexts}</li>)}
+                        </ul>
+                        <img src={props.src} alt={props.alt} className="back-card-pic" />
                                 
-                        </div>
                     </div>
+                </div>
                 </ReactCardFlip>
             </li>
     )
 }
+
+/*<ul className="card-text">
+    <li>{props.text1}</li>
+    <li>{props.text2}</li>
+    <li>{props.text3}</li>
+    <li>{props.text4}</li>
+</ul>*/

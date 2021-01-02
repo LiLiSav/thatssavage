@@ -4,20 +4,9 @@ import './Navbar.css';
 
 export default function Navbar() {
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true)
 
     const closeMobileMenu = () => setClick(false)
     const handleClick = () => setClick(!click);
-
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    }
-
-    window.addEventListener('resize', showButton);
 
     return (
         <>

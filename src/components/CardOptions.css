@@ -143,9 +143,9 @@
     border-radius: 5%;
     color: inherit;
     position: absolute;
-    bottom: 40%;
+    top: 10%;
     width: 100%;
-    text-align: center;
+    /*text-align: center;*/
     font-size: 24px;
     font-weight: bolder;
     list-style-type: disc;
