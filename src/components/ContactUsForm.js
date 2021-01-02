@@ -60,7 +60,6 @@ export default function ContactUsForm() {
     const [formData, setFormData] = useState({})
 
     const updateInput = e => {
-        console.log(formData)
             setFormData({
                 ...formData,
                 [e.target.name]: e.target.value,
@@ -97,30 +96,69 @@ export default function ContactUsForm() {
             <p className="text-dark">Got a question? Want a quote? Got some feedback?
             Don&apos;t hesitate to get in contact and we will be happy to help. Thank you!</p><hr />
             <div className="contactUs text-warning font-weight-bold ">
-                <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          onChange={updateInput}
-          value={formData.name || ''}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          onChange={updateInput}
-          value={formData.email || ''}
-        />
-        <textarea
-          type="text"
-          name="message"
-          placeholder="Message"
-          onChange={updateInput}
-          value={formData.message || ''}
-        ></textarea>
-        <button type="submit">Submit</button>
-      </form>
+                <Form onSubmit={handleSubmit} >
+                    <Form.Row>
+                        <Form.Group as={Col} md="6" controlId="validationFName">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control
+                                name="name"
+                                required
+                                type="text"
+                                placeholder="Enter name"
+                                onChange={updateInput}
+                                value={formData.name || ''}
+                            />
+                            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                            <Form.Control.Feedback type="invalid">Please enter your name.</Form.Control.Feedback>
+                        </Form.Group>
+                    </Form.Row>
+
+                    <Form.Row>
+                        <Form.Group as={Col} md="6" controlId="formEmail">
+                            <Form.Label>Email Address</Form.Label>
+                            <InputGroup>
+                                <Form.Control
+                                    name="email"
+                                    type="email"
+                                    placeholder="Enter email"
+                                    required
+                                    onChange={updateInput}
+                                    value={formData.email || ''}
+                                />
+                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                                <Form.Control.Feedback type="invalid">
+                                    Please enter a valid email.
+                            </Form.Control.Feedback>
+                            </InputGroup>
+                        </Form.Group>
+                    </Form.Row>
+
+                    <Form.Row>
+                        <Form.Group as={Col} controlId="contactForm.Textarea">
+                            <Form.Label>Comment</Form.Label>
+                            <Form.Control as="textarea"
+                                rows={3} placeholder="Please enter your comment"
+                                required
+                                name="message"
+                                onChange={updateInput}
+                                value={formData.message || ''}
+                            />
+                            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                            <Form.Control.Feedback type="invalid">
+                                Please add your comment.
+                        </Form.Control.Feedback>
+                        </Form.Group>
+                    </Form.Row>
+
+                    <Form.Group>
+                        <Form.Check
+                            required
+                            label="Agree to terms and conditions"
+                            feedback="You must agree before submitting."
+                        />
+                    </Form.Group>
+                    <Button className="btn btn-warning my-2 my-md-2" type="submit">Submit</Button>
+                </Form>
             </div>
         </div>
     )

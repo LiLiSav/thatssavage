@@ -1,0 +1,19 @@
+.introCard-contianer {
+    height: 250px;
+    width: 25vw;
+    padding: 20px;
+    background-color: white;
+    margin: 8px;
+    overflow: hidden;
+    color: black;
+}
+
+@media screen and (max-width: 960px) {
+    .introCard-contianer {
+        height: 20vh;
+        width: 80vw;
+        overflow: hidden;
+        color: black;
+    }
+
+}

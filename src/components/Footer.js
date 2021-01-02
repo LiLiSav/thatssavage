@@ -35,11 +35,6 @@ export default function Footer() {
                                     Contact Us
                             </Link>
                             </li>
-                            <li>
-                                <Link to='/our-work' className='text-light nav-link' >
-                                    Our Work
-                                </Link>
-                            </li>
                         </ul>
                     </div>
                     <div className="footer-row">
@@ -52,14 +47,14 @@ export default function Footer() {
                     <div className="footer-row.flat">
                         <h5 className="footer-header">Connect With Us</h5><hr />
                         <div className="centered">
-                            <a href="https://www.facebook.com/thatssavage/" target="_blank"><button type="button" className="btn-- btn-f"><FontAwesomeIcon icon={faFacebookF} size="3x" /></button></a>
-                            <a href="https://www.instagram.com/thatssavage.print/?hl=en" target="_blank"><button type="button" className="btn-- btn-i "><FontAwesomeIcon icon={faInstagram} size="3x" /></button></a>
-                            <a href="https://www.linkedin.com/in/declan-savage-a972b424/?originalSubdomain=ie" target="_blank"><button type="button" className="btn-- btn-l"><FontAwesomeIcon icon={faLinkedinIn} size="3x" /></button></a>
+                            <a href="https://www.facebook.com/thatssavage/" target="_blank" rel="noreferrer"><button type="button" className="btn-- btn-f"><FontAwesomeIcon icon={faFacebookF} size="3x" /></button></a>
+                            <a href="https://www.instagram.com/thatssavage.print/?hl=en" target="_blank" rel="noreferrer"><button type="button" className="btn-- btn-i "><FontAwesomeIcon icon={faInstagram} size="3x" /></button></a>
+                            <a href="https://www.linkedin.com/in/declan-savage-a972b424/?originalSubdomain=ie" target="_blank" rel="noreferrer"><button type="button" className="btn-- btn-l"><FontAwesomeIcon icon={faLinkedinIn} size="3x" /></button></a>
                         </div>
                     </div>
                 </div>
                 <div className="footer-footer">
-                    Created by <a className="link-text" href="https://www.linkedin.com/in/liam-savage-72b532101" target="_blank">Liam</a>
+                    Created by <a className="link-text" href="https://www.linkedin.com/in/liam-savage-72b532101" target="_blank" rel="noreferrer">Liam</a>
                 </div>
 
             </nav>

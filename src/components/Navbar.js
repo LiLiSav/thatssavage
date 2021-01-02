@@ -50,11 +50,6 @@ export default function Navbar() {
                                 Contact Us
                             </Link>
                         </li>
-                        <li className='nav-item'>
-                            <Link to='/our-work' className='nav-links' onClick={closeMobileMenu}>
-                                Our Work
-                            </Link>
-                        </li>
                     </ul>
                 </div>
             </nav>
