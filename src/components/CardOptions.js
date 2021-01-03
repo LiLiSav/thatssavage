@@ -10,8 +10,7 @@ export default function CardOptions(props) {
     };
 
     const listTexts = props.listText;
-    const listItems = listTexts.map((listText) => <li>{listText}</li>);
-
+    
     return (
             <li>
                 <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal" >
@@ -34,10 +33,3 @@ export default function CardOptions(props) {
             </li>
     )
 }
-
-/*<ul className="card-text">
-    <li>{props.text1}</li>
-    <li>{props.text2}</li>
-    <li>{props.text3}</li>
-    <li>{props.text4}</li>
-</ul>*/
