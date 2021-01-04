@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/thatssavage-deploy/static/css/main.64778fc8.chunk.css",
-    "main.js": "/thatssavage-deploy/static/js/main.495f02b0.chunk.js",
-    "main.js.map": "/thatssavage-deploy/static/js/main.495f02b0.chunk.js.map",
+    "main.js": "/thatssavage-deploy/static/js/main.b63728b0.chunk.js",
+    "main.js.map": "/thatssavage-deploy/static/js/main.b63728b0.chunk.js.map",
     "runtime-main.js": "/thatssavage-deploy/static/js/runtime-main.b94085fc.js",
     "runtime-main.js.map": "/thatssavage-deploy/static/js/runtime-main.b94085fc.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/thatssavage-deploy/static/css/2.20aa2d7b.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.19b571f4.chunk.js",
     "static/css/main.64778fc8.chunk.css",
-    "static/js/main.495f02b0.chunk.js"
+    "static/js/main.b63728b0.chunk.js"
   ]
 }
