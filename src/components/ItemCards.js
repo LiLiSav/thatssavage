@@ -11,21 +11,21 @@ export default function ItemCards() {
             
             <ul className="cards-container">
                 <CardOptions
-                    src="./images/mask.jpg"
+                    src={"./images/mask.JPG"}
                     listText={["Business Logos", "Sporting Teams", "Professional Settings", "Small, Medium & Large fit"]}
                     label="Personalised Face Masks"
                     alt="Customer ready masks"
                     bgColour= "dgry"
                 />
                 < CardOptions
-                    src="./images/business.jpg"
+                    src={"./images/business.JPG"}
                     listText={["Polo Shirts/T-Shirts", "Softshell Jackets", "Hoodies/Sweatshirts", "High Visibility Workwear, etc."]}
                     label="Business Printing"
                     alt="Busines ready attire"
                     bgColour="yllw"
                 />
                 <CardOptions
-                    src="./images/hens.jpg"
+                    src={"./images/hens.JPG"}
                     listText={["Custom Design", "Hen/Stag Print Free"]}
                     label="Hen & Stag Parties"
                     colour="#000"
@@ -34,21 +34,21 @@ export default function ItemCards() {
                 />
 
                 <CardOptions
-                    src="./images/sporting.jpg"
+                    src={"./images/sporting.JPG"}
                     listText={["GAA Club Teams", "GAA County Teams", "Rugby Teams", "Football Teams, etc."]}
                     label="Sporting Attire"
                     alt="Sporting Garments printed"
                     bgColour="lgry"
                 />
                 <CardOptions
-                    src="./images/lappin.jpg"
+                    src={"./images/lappin.JPG"}
                     listText={["Simple, Clean, Effective Design", "PDF version for stationary print & PNG for online & Social Media"]}
                     label="Graphic Design"
                     alt="Lappin Logo"
                     bgColour="dgry"
                 />
                 <CardOptions
-                    src="./images/school.jpg"
+                    src={"./images/school.JPG"}
                     listText={["Leaver Hoodies", "School Gym Sacs", "School Gear", "School T-Shirts, etc."]}
                     label="Graduation Printing"
                     alt="Personalised Graduation Garments"
@@ -56,7 +56,7 @@ export default function ItemCards() {
                 />
 
                 <CardOptions
-                    src="./images/jersey.jpg"
+                    src={"./images/jersey.JPG"}
                     listText={["Name & Number Print", "Premier League, SPL, Seria A, La Liga, etc." ]}
                     label="Replica Jersey Printing"
                     alt="Personilised replica jerseys"
@@ -64,14 +64,14 @@ export default function ItemCards() {
 
                 />
                 <CardOptions
-                    src="./images/misc.jpg"
+                    src={"./images/misc.JPG"}
                     listText={["Hip Flasks / Umbrellas", "Mouse Mats / Teddy Bears", "Water Bottle Sleeve", "High Vis/Glow in the Dark Print"]}
                     label="Other Printing Options"
                     alt="Misc. printing options"
                     bgColour="dgry"
                 />
                 <CardOptions
-                    src="./images/occasion.jpg"
+                    src={"./images/occasion.JPG"}
                     listText={["Confirmations / Communions", "Birthdays / Mothers/Fathers Day", "Seasonal Printing", "(St. Patrick's Day, Easter, Halloween, Christmas, etc.)"]}
                     label="Special Occasions"
                     alt="Memorable moments printing"

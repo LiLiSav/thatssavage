@@ -13,7 +13,7 @@ export default function IntroCards() {
                         <h3><b>For all your design needs, </b></h3>
                     </div>
                     <div>
-                        <img src={'./images/Logo.png'} alt="Thatssavage" className="intro-pic-text" />
+                        <img src={'./images/Logo.PNG'} alt="Thatssavage" className="intro-pic-text" />
                     </div>
                     <div className="intro-heading">
                         <h3><b> has got you covered!</b></h3>

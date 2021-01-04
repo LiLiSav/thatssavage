@@ -9,21 +9,21 @@ export default function PicCarousel() {
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src="./images/IM1.jpg"
+                        src={"./images/IM1.JPG"}
                         alt="Happy Customer"
                     />
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src="./images/IM2.jpg"
+                        src={"./images/IM2.JPG"}
                         alt="Happy Customer"
                     />
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src="./images/IM10.jpg"
+                        src={"./images/IM10.JPG"}
                         alt="Happy Customer"
                     />
                 </Carousel.Item>
