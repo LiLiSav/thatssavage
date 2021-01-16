@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css';
+import Name from './images/Name.png'
 
 export default function Navbar() {
     const [click, setClick] = useState(false);
@@ -13,7 +14,7 @@ export default function Navbar() {
             <nav className="navbarTop">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" rel="logo" onClick={closeMobileMenu}>
-                        <img src={'./images/Name.png'} style={{ width: "100%" }} alt='Website Logo' />
+                        <img src={Name} style={{ width: "100%" }} alt='Website Logo' />
                     </Link>
                     <div className="menu-icon" onClick={handleClick }>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

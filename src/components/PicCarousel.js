@@ -1,5 +1,8 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
+import image1 from './images/Im1.jpg'
+import image2 from './images/IM2.jpg'
+import image10 from './images/IM10.jpg'
 
 export default function PicCarousel() {
     return (
@@ -9,21 +12,21 @@ export default function PicCarousel() {
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src={"./images/IM1.JPG"}
+                        src={image1}
                         alt="Happy Customer"
                     />
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src={"./images/IM2.JPG"}
+                        src={image2}
                         alt="Happy Customer"
                     />
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
-                        src={"./images/IM10.JPG"}
+                        src={image10}
                         alt="Happy Customer"
                     />
                 </Carousel.Item>

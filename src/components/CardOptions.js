@@ -25,7 +25,7 @@ export default function CardOptions(props) {
                         <ul className="card-text">
                             {listTexts.map((listTexts) => <li>{listTexts}</li>)}
                         </ul>
-                        <img src={props.src} alt={props.alt} className="back-card-pic" />
+                        <img src={props.srcb} alt={props.alt} className="back-card-pic" />
                                 
                     </div>
                 </div>

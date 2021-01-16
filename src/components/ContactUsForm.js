@@ -5,10 +5,9 @@ import Button from 'react-bootstrap/Button'
 import { Axios } from '../firebase/firebaseConfig'
 import { useAlert } from 'react-alert'
 import { Link } from 'react-router-dom'
+import './CardOptions.css'
 
 export default function ContactUsForm() {
-    const terms = <Link to='Terms-and-conditions'> Terms and Conditions </Link>;
-
     const alert = useAlert();
 
     const [formData, setFormData] = useState({})
@@ -104,9 +103,11 @@ export default function ContactUsForm() {
                         <Form.Check
                             name="check"
                             required
-                            label={terms}
+                            label="I have read and agree to the "
                             feedback="You must agree before submitting."
                         />
+                        <Link style={{ paddingLeft:"20px" }} to='Terms-and-conditions'> Terms and Conditions </Link>
+                        
                     </Form.Group>
                     <Button className="btn btn-warning my-2 my-md-2" type="submit">Submit</Button>
                 </Form>

@@ -19,6 +19,7 @@ function App() {
                   <Route path='/contact-us' component={Contact} />
                   <Route path='/about-us' component={About} />
                   <Route path='/Terms-and-conditions' component={Terms} />
+                  <Route path='***' component={Home} />
               </Switch>
               <Footer />
           </Router>

@@ -7,7 +7,6 @@
     width: 100vw;
     margin: 0;
     height: 55vh;
-    
 }
 
 .intro-container {
@@ -74,22 +73,22 @@
 
 .dgry {
     background-color: #343a40;
-    color: #f5be27;
+    color: #ffdd17;
 }
 
 .yllw {
-    background-color: #f5be27;
+    background-color: #ffdd17;
     color: black;
 }
 
 .lgry {
-    background-color: #b8b4a9;
+    background-color: #a7a9ab;
     color: black;
 }
 
 .wht {
     background-color: antiquewhite;
-    color: #f5be27;
+    color: #ffdd17;
 }
 
 .card-fig {
@@ -145,7 +144,6 @@
     position: absolute;
     top: 10%;
     width: 100%;
-    /*text-align: center;*/
     font-size: 24px;
     font-weight: bolder;
     list-style-type: disc;
@@ -163,6 +161,7 @@
 
     .intro-cards-container {
         width: 100%;
+        height: auto;
         align-items: center;
         align-content: center;
         justify-content: space-evenly;
@@ -188,5 +187,12 @@
 
     .cards-container {
         width: 99%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .card-items {
+        height: 80vw !important;
+        width: 80vw !important;
     }
 }

@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 960px) {
     .introCard-contianer {
-        height: 20vh;
+        height: auto;
         width: 80vw;
         overflow: hidden;
         color: black;
