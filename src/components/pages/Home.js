@@ -7,9 +7,9 @@ import PicCarousel from '../PicCarousel';
 export default function Home() {
      return (
          <>
-             <IntroCards />
-             <ItemCards />
-             <PicCarousel />
+            <IntroCards />
+            <ItemCards />
+            <PicCarousel />
          </>
      );
 }

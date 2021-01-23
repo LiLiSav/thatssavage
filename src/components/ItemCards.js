@@ -48,7 +48,7 @@ export default function ItemCards() {
                 <CardOptions
                     src={hens}
                     srcb={hensf}
-                    listText={["Custom Design", "Hen/Stag Print Free"]}
+                    listText={["Custom Design", "Hen/Stag Printed Free"]}
                     label="Hen & Stag Parties"
                     colour="#000"
                     alt="Hens and stags novelty tops"

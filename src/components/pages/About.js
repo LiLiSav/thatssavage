@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../App.css'
 
 export default function About() {
@@ -10,8 +11,8 @@ export default function About() {
             </div>
             
 
-            <p>That&apos;s Savage specialise in high quality, custom print garments and logo design. With over 10 years experience
-            in design and 5 years garment printing, we are confident that we can supply a tailor made print to your liking.
+            <p>That&apos;sSavage specialise in high quality, custom print garments and logo design. With over 10 years experience
+            in design and garment printing, we are confident that we can supply a tailor made print to your liking.
             There are no minimum order requirements meaning that we can print special one off garments while also catering for
             much larger orders.
             </p>
@@ -32,7 +33,7 @@ export default function About() {
                 Max print size 300mm wide x 500mm high.
             </p>
 
-            <p><b className="text-warning">DTG:</b> The beauty of DTG printing is that you have unlimited colour options for prints on 80% + cotton blend
+            <p><b className="text-warning">DTG:</b> The beauty of DTG printing is that you have unlimited colour options for prints on 80-100% cotton blend
                 clothing. Photographs, blended and gradient colours are easily printed onto cotton t-shirts using DTG printing.
                 Max print size 340mm wide x 400mm high.
             </p>
@@ -41,7 +42,7 @@ export default function About() {
             the most suitable print method.
             </p>
 
-            <p>Get in touch today for more details, a visual and a quote.</p>
+            <p><Link className="text-warning " to='Contact'><b><u>Get in touch</u></b></Link> today for more details, a visual and a quote.</p>
         </div>
      )
 }

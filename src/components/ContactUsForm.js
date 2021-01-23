@@ -106,7 +106,7 @@ export default function ContactUsForm() {
                             label="I have read and agree to the "
                             feedback="You must agree before submitting."
                         />
-                        <Link style={{ paddingLeft:"20px" }} to='Terms-and-conditions'> Terms and Conditions </Link>
+                        <Link className="text-warning" style={{ paddingLeft:"20px" }} to='Terms-and-conditions'> <u>Terms and Conditions</u></Link>
                         
                     </Form.Group>
                     <Button className="btn btn-warning my-2 my-md-2" type="submit">Submit</Button>

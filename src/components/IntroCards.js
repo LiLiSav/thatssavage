@@ -30,7 +30,7 @@ export default function IntroCards() {
                             icon="faUserPlus"
                         />
                         <IntroItem
-                            title="Highest Quality"
+                            title="Highest Quality and Service"
                             text="We promise to work with you to provide the perfect solution for you or your business. From the apparel to the design, we got your back."
                             icon="/"
                         />
