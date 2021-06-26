@@ -20,16 +20,16 @@ export default function ContactUsForm() {
     }
     const handleSubmit = event => {
         event.preventDefault()
-        sendEmail()
         setFormData({
             name: '',
             email: '',
             message: ''
         })
+        sendEmail()
     }
     const sendEmail = () => {
         Axios.post(
-            'https://us-central1-thatssavage-69800.cloudfunctions.net/submit',
+            'https://thatssavage-backend.herokuapp.com/',
             formData
         )
         .catch(error => {
