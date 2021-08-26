@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component, Fragment } from "react";
 import { withRouter } from "react-router-dom";
 
 class ScrollToTop extends Component {
@@ -9,7 +9,7 @@ class ScrollToTop extends Component {
 	}
 
 	render() {
-		return <React.Fragment />
+		return <Fragment />
 	}
 }
 

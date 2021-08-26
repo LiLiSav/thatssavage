@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './CardOptions.css'
 import ReactCardFlip from 'react-card-flip';
 
@@ -8,8 +8,6 @@ export default function CardOptions(props) {
     const handleClick = () => {
         setIsFlipped(!isFlipped);
     };
-
-    const listTexts = props.listText;
     
     return (
             <li>
@@ -23,7 +21,9 @@ export default function CardOptions(props) {
                 <div className={`card-items ${props.bgColour}`} onClick={handleClick}>
                     <div className="back-card-block">
                         <ul className="card-text">
-                            {listTexts.map((listTexts) => <li>{listTexts}</li>)}
+                            {props.listText.map((lstText, index) => (
+                            <li key={index}>{lstText}</li>
+                            ))}
                         </ul>
                         <img src={props.srcb} alt={props.alt} className="back-card-pic" />
                                 

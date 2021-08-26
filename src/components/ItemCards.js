@@ -1,4 +1,3 @@
-import React from 'react'
 import './CardOptions.css';
 import CardOptions from './CardOptions';
 import mask from './images/mask.jpg';

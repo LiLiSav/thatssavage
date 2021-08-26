@@ -1,10 +1,7 @@
-import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faLinkedinIn, faFacebookF } from '@fortawesome/free-brands-svg-icons'
 
 
 export default function Footer() {

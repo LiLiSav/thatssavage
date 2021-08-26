@@ -1,42 +1,45 @@
-import React, { useState } from 'react'
-import Form from 'react-bootstrap/Form'
-import { Col, InputGroup } from 'react-bootstrap'
-import Button from 'react-bootstrap/Button'
-import { Axios } from '../firebase/firebaseConfig'
-import { useAlert } from 'react-alert'
-import { Link } from 'react-router-dom'
-import './CardOptions.css'
+import { useState } from 'react';
+import Form from 'react-bootstrap/Form';
+import { Col, InputGroup } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import { useAlert } from 'react-alert';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import './CardOptions.css';
 
 export default function ContactUsForm() {
+    // 'http://localhost:5000/'
+    // 'https://thatssavage-backend.herokuapp.com/'
     const alert = useAlert();
 
-    const [formData, setFormData] = useState({})
+    const [formData, setFormData] = useState({});
 
-    const updateInput = e => {
+    const updateInput = (event) => {
             setFormData({
                 ...formData,
-                [e.target.name]: e.target.value,
+                [event.target.name]: event.target.value,
             })
     }
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         event.preventDefault()
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
+        axios.post('https://thatssavage-backend.herokuapp.com/', formData).then(res => {
+            console.log(res);
+            if(res.data === "success") {
+                alert.success('Thanks for your message!')
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: ''
+                })
+            } 
+            else {
+                throw new Error(res);
+            }
         })
-        sendEmail()
-    }
-    const sendEmail = () => {
-        Axios.post(
-            'https://thatssavage-backend.herokuapp.com/',
-            formData
-        )
         .catch(error => {
             console.log(error)
             alert.error('Something went wrong! Refresh the page or give us a call.')
         })
-        alert.success('Thanks for your message!')
     }
 
     return (

@@ -1,8 +1,6 @@
-import React from 'react'
 import './CardOptions.css';
 import IntroItem from './IntroItem.js';
 import Logo from './images/Logo.png'
-
 
 
 export default function IntroCards() {
