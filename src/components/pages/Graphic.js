@@ -1,5 +1,3 @@
-import React from 'react'
-import '../../App.css'
 import drawing from '../images/little-girl-drawing-and-coloring.jpg'
 
 export default function Graphic() {

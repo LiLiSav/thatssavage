@@ -1,6 +1,4 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import '../../App.css'
 
 export default function About() {
     return (
@@ -11,7 +9,7 @@ export default function About() {
             </div>
             
 
-            <p>That&apos;sSavage specialise in high quality, custom print garments and logo design. With over 10 years experience
+            <p><i>That's Savage</i> specialise in high quality, custom print garments and logo design. With over 10 years experience
             in design and garment printing, we are confident that we can supply a tailor made print to your liking.
             There are no minimum order requirements meaning that we can print special one off garments while also catering for
             much larger orders.
@@ -42,7 +40,7 @@ export default function About() {
             the most suitable print method.
             </p>
 
-            <p><Link className="text-warning " to='Contact'><b><u>Get in touch</u></b></Link> today for more details, a visual and a quote.</p>
+            <p><Link className="text-warning " to='contact-us'><b><u>Get in touch</u></b></Link> today for more details, a visual and a quote.</p>
         </div>
-     )
+    )
 }
