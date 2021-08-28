@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import Form from 'react-bootstrap/Form';
-import { Col, InputGroup } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+import { Button, Col, Form, InputGroup, Spinner } from 'react-bootstrap';
 import { useAlert } from 'react-alert';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './CardOptions.css';
+import '../css/CardOptions.css';
 
 export default function ContactUsForm() {
     // 'http://localhost:5000/'
@@ -13,6 +11,7 @@ export default function ContactUsForm() {
     const alert = useAlert();
 
     const [formData, setFormData] = useState({});
+    const [loading, setLoading] = useState(false);
 
     const updateInput = (event) => {
             setFormData({
@@ -20,14 +19,16 @@ export default function ContactUsForm() {
                 [event.target.name]: event.target.value,
             })
     }
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        axios.post('https://thatssavage-backend.herokuapp.com/', formData).then(res => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setLoading(true);
+        try {
+            const res = await axios.post('https://thatssavage-backend.herokuapp.com/', formData)
             console.log(res);
             if(res.data === "success") {
                 alert.success('Thanks for your message!')
                 setFormData({
-                    name: '',
+                    name: formData.name,
                     email: '',
                     message: ''
                 })
@@ -35,17 +36,18 @@ export default function ContactUsForm() {
             else {
                 throw new Error(res);
             }
-        })
-        .catch(error => {
-            console.log(error)
-            alert.error('Something went wrong! Refresh the page or give us a call.')
-        })
+        } 
+        catch (err) {
+            console.log(err);
+            alert.error('Something went wrong! Refresh the page or give us a call.');
+        }
+        setLoading(false);
     }
 
     return (
         <div className="container bg-secondary card shadow p-3 mb-2 mt-2">
             <h2 className="title text-warning">Contact Us</h2>
-            <p className="text-dark">Got a question? Want a quote? Got some feedback?
+            <p className="text-dark" style={{fontWeight: 'bold'}}>Got a question? Want a quote? Got some feedback?
             Don&apos;t hesitate to get in contact and we will be happy to help. Thank you!</p><hr />
             <div className="contactUs text-warning font-weight-bold ">
                 <Form onSubmit={handleSubmit} >
@@ -106,13 +108,24 @@ export default function ContactUsForm() {
                         <Form.Check
                             name="check"
                             required
-                            label="I have read and agree to the "
+                            label={
+                                <Link className="text-warning" to='Terms-and-conditions'>
+                                    I have read and agree to the Terms and Conditions
+                                </Link>
+                            }
                             feedback="You must agree before submitting."
                         />
-                        <Link className="text-warning" style={{ paddingLeft:"20px" }} to='Terms-and-conditions'> <u>Terms and Conditions</u></Link>
                         
                     </Form.Group>
-                    <Button className="btn btn-warning my-2 my-md-2" type="submit">Submit</Button>
+                    <Button className="btn btn-warning my-2 my-md-2" type="submit">
+                        {loading && <Spinner
+                            as="span"
+                            animation="border"
+                            role="status"
+                            aria-hidden='true' /> }
+
+                        {!loading && 'Submit'}
+                    </Button>
                 </Form>
             </div>
         </div>

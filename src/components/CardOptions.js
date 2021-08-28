@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './CardOptions.css'
+import '../css/CardOptions.css'
 import ReactCardFlip from 'react-card-flip';
 
 export default function CardOptions(props) {

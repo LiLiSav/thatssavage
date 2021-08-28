@@ -1,4 +1,4 @@
-import './IntroItem.css'
+import '../css/IntroItem.css'
 
 
 export default function IntroItem(props) {

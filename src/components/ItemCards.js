@@ -1,23 +1,23 @@
-import './CardOptions.css';
+import '../css/CardOptions.css';
 import CardOptions from './CardOptions';
-import mask from './images/mask.jpg';
-import maskf from './images/maskf.png';
-import business from './images/business.jpg';
-import businessf from './images/businessf.png';
-import hens from './images/hens.jpg';
-import hensf from './images/hensf.png';
-import sports from './images/sporting.jpg';
-import sportsf from './images/sportingf.png';
-import design from './images/Design.png';
-import designf from './images/Design.png';
-import schools from './images/school.jpg';
-import schoolsf from './images/schoolf.png';
-import jersey from './images/jersey.jpg';
-import jerseyf from './images/jerseyf.png';
-import misc from './images/misc.jpg';
-import miscf from './images/miscf.png';
-import occasions from './images/occasion.jpg';
-import occasionsf from './images/occasionsf.png';
+import mask from '../images/mask.jpg';
+import maskf from '../images/maskf.png';
+import business from '../images/business.jpg';
+import businessf from '../images/businessf.png';
+import hens from '../images/hens.jpg';
+import hensf from '../images/hensf.png';
+import sports from '../images/sporting.jpg';
+import sportsf from '../images/sportingf.png';
+import design from '../images/Design.png';
+import designf from '../images/Design.png';
+import schools from '../images/school.jpg';
+import schoolsf from '../images/schoolf.png';
+import jersey from '../images/jersey.jpg';
+import jerseyf from '../images/jerseyf.png';
+import misc from '../images/misc.jpg';
+import miscf from '../images/miscf.png';
+import occasions from '../images/occasion.jpg';
+import occasionsf from '../images/occasionsf.png';
 
 
 export default function ItemCards() {

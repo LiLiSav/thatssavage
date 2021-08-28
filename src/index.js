@@ -8,13 +8,13 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from './components/Navbar';
-import Home from './components/pages/Home.js';
-import Graphic from './components/pages/Graphic';
-import Contact from './components/pages/Contact';
-import About from './components/pages/About';
 import Footer from './components/Footer';
-import Terms from './components/pages/Terms';
-import ScrollToTop from './components/pages/ScrollToTop'
+import Home from './pages/Home.js';
+import Graphic from './pages/Graphic';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Terms from './pages/Terms';
+import ScrollToTop from './pages/ScrollToTop'
 
 const options = {
     position: positions.BOTTOM_RIGHT,

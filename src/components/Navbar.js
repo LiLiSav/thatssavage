@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css';
-import Name from './images/Name.png'
+import '../css/Navbar.css';
+import Name from '../images/Name.png'
 
 export default function Navbar() {
     const [click, setClick] = useState(false);

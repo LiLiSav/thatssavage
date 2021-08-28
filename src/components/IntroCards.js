@@ -1,6 +1,6 @@
-import './CardOptions.css';
+import '../css/CardOptions.css';
 import IntroItem from './IntroItem.js';
-import Logo from './images/Logo.png'
+import Logo from '../images/Logo.png'
 
 
 export default function IntroCards() {
