@@ -7,9 +7,6 @@
 ---
 <a href="https://thatssavage.ie/" style="text-decoration: none; color: white">
 That's Savage specialise in high quality, custom print garments and logo design. With over 10 years experience in design and garment printing, we are confident that we can supply a tailor made print to your liking. There are no minimum order requirements meaning that we can print special one off garments while also catering for much larger orders.
-<br>
-<br>
-<div style ="text-align:center; font-size:1.4em">https://thatssavage.ie/</div>
 </a>
 
 ---
