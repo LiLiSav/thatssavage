@@ -32,10 +32,9 @@ That's Savage specialise in high quality, custom print garments and logo design.
 
 <div align="center">
 
-| Authors        | LinkedIn | Github | Contribution                        |   |
-|----------------|----------|--------|-------------------------------------|---|
-| **Liam Savage**    | [liam-savage](https://www.linkedin.com/in/liam-savage-72b532101) | [LiLiSav](https://github.com/LiLiSav) | Front-end Creator & Deployment      |   |
-| **Michael Savage** | [michaelssavage](https://www.linkedin.com/in/michaelssavage) | [michaelssavage](https://github.com/michaelssavage) | Refactoring & [Contact Form Back-end](https://github.com/michaelssavage/thatssavage-form) |   |
-|                |          |        |                                     |   |
+| Authors        | LinkedIn | Github | Contribution                        |
+|----------------|----------|--------|-------------------------------------|
+| **Liam Savage**    | [liam-savage](https://www.linkedin.com/in/liam-savage-72b532101) | [LiLiSav](https://github.com/LiLiSav) | Front-end Creator & Deployment      |
+| **Michael Savage** | [michaelssavage](https://www.linkedin.com/in/michaelssavage) | [michaelssavage](https://github.com/michaelssavage) | Refactoring & [Contact Form Back-end](https://github.com/michaelssavage/thatssavage-form) |
 
 </div>
