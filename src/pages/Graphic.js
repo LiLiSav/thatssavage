@@ -1,4 +1,4 @@
-import drawing from '../images/little-girl-drawing-and-coloring.jpg'
+import drawing from '../images/in-development.jpg'
 
 export default function Graphic() {
     return (

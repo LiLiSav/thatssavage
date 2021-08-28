@@ -61,7 +61,6 @@
     background-color: tomato;
     margin: 8px;
     border-radius: 5%;
-    overflow: hidden;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.6);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.06));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.06));
