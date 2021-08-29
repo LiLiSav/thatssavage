@@ -34,7 +34,7 @@
 .footer-footer {
     margin: 0 10vh;
     border-color: darkslategray;
-    font-weight: bold;
+    color: #a7a9ac;
     border-top: solid 1px;
     height: auto;
     text-align: right;
@@ -47,12 +47,6 @@
 
 .link-text:hover {
     color: hotpink;
-}
-
-@media screen and (max-width: 760px) {
-    .footer-row {
-        padding: 0 120px;
-    }
 }
 
 .icon::before {

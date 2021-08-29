@@ -166,6 +166,8 @@
         text-decoration: none;
         list-style-type: none;
         margin-top: 0;
+        padding: 0px !important;
+        text-align: justify;
     }
 
     .intro-container {
