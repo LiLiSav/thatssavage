@@ -37,17 +37,17 @@ export default function Footer() {
             <nav className="footer-container">
                 <div className="footer-items">
 
-                    <div className="footer-row">
+                    <div className="footer-row order-1">
                         <h5 className="footer-header centered">Phone Number</h5>
                             <PhoneNumber />
                     </div>
 
-                    <div className="footer-row">
+                    <div className="footer-row order-2">
                         <h5 className="footer-header centered">Social Media</h5>
                             < SocialMediaButtons />
                     </div>
 
-                    <div className="footer-row">
+                    <div className="footer-row order-3">
                         <h5 className="footer-header centered" style={{marginBottom: '0rem'}}>Monaghan Office</h5>
                             < Address />
                     </div>

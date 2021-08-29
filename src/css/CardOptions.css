@@ -190,7 +190,7 @@
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 460px) {
     .card-items {
         height: 80vw !important;
         width: 80vw !important;

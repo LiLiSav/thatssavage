@@ -27,6 +27,27 @@
     margin: 0px 0px;
 }
 
+@media screen and (max-width: 760px) {
+    .footer-row {
+        width: 50%;
+    }
+    .order-1 {
+        order: 1;
+    }
+    .order-3 {
+        order: 2;
+    }
+    .order-2 {
+        order: 3;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .footer-row {
+        width: 100%;
+    }
+}
+
 .footer-spacing {
     margin-bottom: 4vh;
 }
