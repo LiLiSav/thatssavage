@@ -1,7 +1,17 @@
 import '../css/CardOptions.css';
-import IntroItem from './IntroItem.js';
+import '../css/IntroItem.css'
 import Logo from '../images/Logo.png'
 
+function IntroItem(props) {
+    return (
+        <li>
+            <div className="introCard-container">
+                <h4><b>{props.title}</b></h4>
+                <p>{props.text}</p>
+            </div>
+        </li>
+    )
+}
 
 export default function IntroCards() {
     return (

@@ -7,9 +7,8 @@ export default function About() {
                 <h2 className="title text-warning">About Us</h2>
                 <hr />
             </div>
-            
 
-            <p><i>That's Savage</i> specialise in high quality, custom print garments and logo design. With over 10 years experience
+            <p><i>That's Savage</i> specialize in high quality, custom print garments and logo design. With over 10 years experience
             in design and garment printing, we are confident that we can supply a tailor made print to your liking.
             There are no minimum order requirements meaning that we can print special one off garments while also catering for
             much larger orders.
@@ -40,7 +39,7 @@ export default function About() {
             the most suitable print method.
             </p>
 
-            <p><Link className="text-warning " to='contact-us'><b><u>Get in touch</u></b></Link> today for more details, a visual and a quote.</p>
+            <p><Link className="text-warning" to='contact-us'><b><u>Get in touch</u></b></Link> today for more details, a visual and a quote.</p>
         </div>
     )
 }
