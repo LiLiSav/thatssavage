@@ -10,7 +10,7 @@ export default function Navbar() {
 	const handleClick = () => setClick(!click);
 
 	return (
-		<nav className="navbarTop">
+		<nav className="navbar-top">
 			<div className="navbar-container">
 				<Link
 					to="/"
