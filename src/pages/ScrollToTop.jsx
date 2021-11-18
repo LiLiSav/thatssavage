@@ -1,4 +1,5 @@
-import { Component, Fragment } from "react";
+/* eslint-disable react/jsx-no-useless-fragment */
+import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
 class ScrollToTop extends Component {
@@ -9,8 +10,8 @@ class ScrollToTop extends Component {
 	}
 
 	render() {
-		return <Fragment />
+		return <></>;
 	}
 }
 
-export default withRouter(ScrollToTop)
+export default withRouter(ScrollToTop);

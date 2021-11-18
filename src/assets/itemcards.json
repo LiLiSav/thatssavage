@@ -1,93 +1,111 @@
 [
-    {
-        "front":"mask.jpg",
-        "back":"maskf.png",
-        "listText": [
-            "Business Logos", "Sporting Teams", "Professional Settings", "Small, Medium & Large fit"
-        ],
-        "label":"Personalised Face Masks",
-        "alt":"Customer ready masks",
-        "bgColour":"dgry"
-    },
-    {
-        "front":"business.jpg",
-        "back":"businessf.png",
-        "listText": [
-            "Polo Shirts/T-Shirts", "Softshell Jackets", "Hoodies/Sweatshirts", "High Visibility Workwear, etc."
-        ],
-        "label":"Business Printing",
-        "alt":"Busines ready attire",
-        "bgColour":"yllw"
-    },
-    {
-        "front":"hens.jpg",
-        "back":"hensf.png",
-        "listText": [
-            "Custom Design", "Hen/Stag Printed Free"
-        ],
-        "label":"Hen & Stag Parties",
-        "colour":"#000",
-        "alt":"Hens and stags novelty tops",
-        "bgColour":"lgry"
-    },
-    {
-        "front":"sporting.jpg",
-        "back":"sportingf.png",
-        "listText": [
-            "GAA Club Teams", "GAA County Teams", "Rugby Teams", "Football Teams, etc."
-        ],
-        "label":"Sporting Attire",
-        "alt":"Sporting Garments printed",
-        "bgColour":"lgry"
-    },
-    {
-        "front":"Design.png",
-        "back":"Design.png",
-        "listText": [
-            "Simple, Clean, Effective Design", "PDF version for stationary print & PNG for online & Social Media"
-        ],
-        "label":"Graphic Design",
-        "alt":"Lappin Logo",
-        "bgColour":"dgry"
-    },
-    {
-        "front":"school.jpg",
-        "back":"schoolf.png",
-        "listText": [
-            "Leaver Hoodies", "School Gym Sacs", "School Gear", "School T-Shirts, etc."
-        ],
-        "label":"Graduation Printing",
-        "alt":"Personalised Graduation Garments",
-        "bgColour":"yllw"
-    },
-    {
-        "front":"jersey.jpg",
-        "back":"jerseyf.png",
-        "listText": [
-            "Name & Number Print", "Premier League, SPL, Serie A, La Liga, etc."
-        ],
-        "label":"Replica Jersey Printing",
-        "alt":"Personilised replica jerseys",
-        "bgColour":"yllw"
-    },
-    {
-        "front":"misc.jpg",
-        "back":"miscf.png",
-        "listText": [
-            "Hip Flasks / Umbrellas", "Mouse Mats / Teddy Bears", "Water Bottle Sleeve", "High Vis/Glow in the Dark Print"
-        ],
-        "label":"Other Printing Options",
-        "alt":"Misc. printing options",
-        "bgColour":"dgry"
-    },
-    {
-        "front":"occasion.jpg",
-        "back":"occasionsf.png",
-        "listText": [
-            "Confirmations / Communions", "Birthdays / Mothers/Fathers Day", "Seasonal Printing", "(St. Patrick's Day, Easter, Halloween, Christmas, etc.)"
-        ],
-        "label":"Special Occasions",
-        "alt":"Memorable moments printing",
-        "bgColour":"lgry"
-    }
+	{
+		"front": "mask.jpg",
+		"back": "maskf.png",
+		"listText": [
+			"Business Logos",
+			"Sporting Teams",
+			"Professional Settings",
+			"Small, Medium & Large fit"
+		],
+		"label": "Personalised Face Masks",
+		"alt": "Customer ready masks",
+		"bgColour": "dgry"
+	},
+	{
+		"front": "business.jpg",
+		"back": "businessf.png",
+		"listText": [
+			"Polo Shirts/T-Shirts",
+			"Softshell Jackets",
+			"Hoodies/Sweatshirts",
+			"High Visibility Workwear, etc."
+		],
+		"label": "Business Printing",
+		"alt": "Busines ready attire",
+		"bgColour": "yllw"
+	},
+	{
+		"front": "hens.jpg",
+		"back": "hensf.png",
+		"listText": ["Custom Design", "Hen/Stag Printed Free"],
+		"label": "Hen & Stag Parties",
+		"color": "#000",
+		"alt": "Hens and stags novelty tops",
+		"bgColour": "lgry"
+	},
+	{
+		"front": "sporting.jpg",
+		"back": "sportingf.png",
+		"listText": [
+			"GAA Club Teams",
+			"GAA County Teams",
+			"Rugby Teams",
+			"Football Teams, etc."
+		],
+		"label": "Sporting Attire",
+		"alt": "Sporting Garments printed",
+		"bgColour": "lgry"
+	},
+	{
+		"front": "Design.png",
+		"back": "Design.png",
+		"listText": [
+			"Simple, Clean, Effective Design",
+			"PDF version for stationary print & PNG for online & Social Media"
+		],
+		"label": "Graphic Design",
+		"alt": "Lappin Logo",
+		"bgColour": "dgry"
+	},
+	{
+		"front": "school.jpg",
+		"back": "schoolf.png",
+		"listText": [
+			"Leaver Hoodies",
+			"School Gym Sacs",
+			"School Gear",
+			"School T-Shirts, etc."
+		],
+		"label": "Graduation Printing",
+		"alt": "Personalised Graduation Garments",
+		"bgColour": "yllw"
+	},
+	{
+		"front": "jersey.jpg",
+		"back": "jerseyf.png",
+		"listText": [
+			"Name & Number Print",
+			"Premier League, SPL, Serie A, La Liga, etc."
+		],
+		"label": "Replica Jersey Printing",
+		"alt": "Personilised replica jerseys",
+		"bgColour": "yllw"
+	},
+	{
+		"front": "misc.jpg",
+		"back": "miscf.png",
+		"listText": [
+			"Hip Flasks / Umbrellas",
+			"Mouse Mats / Teddy Bears",
+			"Water Bottle Sleeve",
+			"High Vis/Glow in the Dark Print"
+		],
+		"label": "Other Printing Options",
+		"alt": "Misc. printing options",
+		"bgColour": "dgry"
+	},
+	{
+		"front": "occasion.jpg",
+		"back": "occasionsf.png",
+		"listText": [
+			"Confirmations / Communions",
+			"Birthdays / Mothers/Fathers Day",
+			"Seasonal Printing",
+			"(St. Patrick's Day, Easter, Halloween, Christmas, etc.)"
+		],
+		"label": "Special Occasions",
+		"alt": "Memorable moments printing",
+		"bgColour": "lgry"
+	}
 ]
