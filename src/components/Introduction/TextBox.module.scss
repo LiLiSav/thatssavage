@@ -1,0 +1,15 @@
+.itemContainer {
+  height: 250px;
+  width: 25vw;
+  padding: 20px;
+  background-color: white;
+  margin: 8px;
+  color: black;
+}
+
+@media screen and (max-width: 960px) {
+  .itemContainer {
+    height: auto;
+    width: 80vw;
+  }
+}
