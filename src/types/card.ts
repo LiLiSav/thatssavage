@@ -1,8 +1,8 @@
+import { ReactNode } from "react";
+
 export interface CardOptionsProps {
-  label: string;
-  front: string;
-  back?: string;
+  label?: string;
+  front?: string;
   bulletpoints?: string[];
-  imgAlt?: string;
-  bgColour?: string;
+  children?: ReactNode;
 }

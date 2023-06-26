@@ -3,7 +3,6 @@ import { CardOptionsProps } from "types/card";
 export const cards: CardOptionsProps[] = [
   {
     front: "mask.jpg",
-    back: "maskf.png",
     bulletpoints: [
       "Business Logos",
       "Sporting Teams",
@@ -11,12 +10,9 @@ export const cards: CardOptionsProps[] = [
       "Small, Medium & Large fit",
     ],
     label: "Personalised Face Masks",
-    imgAlt: "Customer ready masks",
-    bgColour: "dgry",
   },
   {
     front: "business.jpg",
-    back: "businessf.png",
     bulletpoints: [
       "Polo Shirts/T-Shirts",
       "Softshell Jackets",
@@ -24,55 +20,37 @@ export const cards: CardOptionsProps[] = [
       "High Visibility Workwear, etc.",
     ],
     label: "Business Printing",
-    imgAlt: "Busines ready attire",
-    bgColour: "yllw",
   },
   {
     front: "hens.jpg",
-    back: "hensf.png",
     bulletpoints: ["Custom Design", "Hen/Stag Printed Free"],
     label: "Hen & Stag Parties",
-    imgAlt: "Hens and stags novelty tops",
-    bgColour: "lgry",
   },
   {
     front: "sporting.jpg",
-    back: "sportingf.png",
     bulletpoints: ["GAA Club Teams", "GAA County Teams", "Rugby Teams", "Football Teams, etc."],
     label: "Sporting Attire",
-    imgAlt: "Sporting Garments printed",
-    bgColour: "lgry",
   },
   {
     front: "Design.png",
-    back: "Design.png",
     bulletpoints: [
       "Simple, Clean, Effective Design",
       "PDF version for stationary print & PNG for online & Social Media",
     ],
     label: "Graphic Design",
-    imgAlt: "Lappin Logo",
-    bgColour: "dgry",
   },
   {
     front: "school.jpg",
-    back: "schoolf.png",
     bulletpoints: ["Leaver Hoodies", "School Gym Sacs", "School Gear", "School T-Shirts, etc."],
     label: "Graduation Printing",
-    imgAlt: "Personalised Graduation Garments",
-    bgColour: "yllw",
   },
   {
     front: "jersey.jpg",
-    back: "jerseyf.png",
     bulletpoints: ["Name & Number Print", "Premier League, SPL, Serie A, La Liga, etc."],
     label: "Replica Jersey Printing",
-    imgAlt: "Personilised replica jerseys",
-    bgColour: "yllw",
   },
   {
     front: "misc.jpg",
-    back: "miscf.png",
     bulletpoints: [
       "Hip Flasks / Umbrellas",
       "Mouse Mats / Teddy Bears",
@@ -80,12 +58,9 @@ export const cards: CardOptionsProps[] = [
       "High Vis/Glow in the Dark Print",
     ],
     label: "Other Printing Options",
-    imgAlt: "Misc. printing options",
-    bgColour: "dgry",
   },
   {
     front: "occasion.jpg",
-    back: "occasionsf.png",
     bulletpoints: [
       "Confirmations / Communions",
       "Birthdays / Mothers/Fathers Day",
@@ -93,7 +68,5 @@ export const cards: CardOptionsProps[] = [
       "(St. Patrick's Day, Easter, Halloween, Christmas, etc.)",
     ],
     label: "Special Occasions",
-    imgAlt: "Memorable moments printing",
-    bgColour: "lgry",
   },
 ];

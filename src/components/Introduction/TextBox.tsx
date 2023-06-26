@@ -1,4 +1,4 @@
-import styles from "./TextBox.module.scss";
+import styles from "./Introduction.module.scss";
 
 interface TextBoxProps {
   title: string;

@@ -1,0 +1,79 @@
+.itemContainer {
+  height: 250px;
+  width: 25vw;
+  padding: 20px;
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 960px) {
+  .itemContainer {
+    height: auto;
+    width: 80vw;
+  }
+}
+
+// ==============
+//  Introduction
+// ==============
+
+.fullPageContainer {
+  margin: 0;
+  min-height: 50vh;
+  background-color: #343a40;
+  color: #ffdd17;
+}
+
+.introContainer {
+  padding: 1rem 0 6rem 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.introHeading {
+  padding: 0 10px;
+  text-align: center;
+}
+
+.introPicText {
+  width: 300px;
+  vertical-align: bottom;
+}
+
+.introCardsContainer {
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  text-decoration: none;
+  list-style-type: none;
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 960px) {
+  .introCardsContainer {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0px !important;
+    text-align: justify;
+  }
+
+  .introContainer {
+    width: 100%;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

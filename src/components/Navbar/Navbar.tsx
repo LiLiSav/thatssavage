@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Name from "images/Name.png";
 import styles from "./Navbar.module.scss";
 import { NavItem } from "./NavItem";
+import { navArray } from "./navArray";
 
 export const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -26,8 +27,8 @@ export const Navbar = () => {
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? `${styles.navMenu} ${styles.active}` : styles.navMenu}>
-          {["Home", "Graphic Design", "Contact Us", "About"].map((navItem) => {
-            return <NavItem key={navItem} closeMobileMenu={closeMobileMenu} name={navItem} />;
+          {navArray.map((navItem) => {
+            return <NavItem key={navItem.name} closeMobileMenu={closeMobileMenu} item={navItem} />;
           })}
         </ul>
       </div>

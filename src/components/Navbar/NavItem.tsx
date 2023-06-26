@@ -3,14 +3,17 @@ import styles from "./Navbar.module.scss";
 
 interface NavItemProps {
   closeMobileMenu: () => void;
-  name: string;
+  item: {
+    name: string;
+    link: string;
+  };
 }
 
-export const NavItem = ({ closeMobileMenu, name }: NavItemProps) => {
+export const NavItem = ({ closeMobileMenu, item }: NavItemProps) => {
   return (
     <li className={styles.navItem}>
-      <Link to="/" className={styles.navLinks} onClick={closeMobileMenu}>
-        <span className={styles.NoTextBreak}>{name}</span>
+      <Link to={item.link} className={styles.navLinks} onClick={closeMobileMenu}>
+        <span className={styles.NoTextBreak}>{item.name}</span>
       </Link>
     </li>
   );

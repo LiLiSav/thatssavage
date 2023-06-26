@@ -48,7 +48,7 @@ export default function About() {
       </p>
 
       <p>
-        <Link className="text-warning" to="contact-us">
+        <Link className="text-warning" to="/contact-us">
           <b>
             <u>Get in touch</u>
           </b>

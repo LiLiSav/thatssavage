@@ -1,21 +1,25 @@
+import { Link } from "react-router-dom";
 import { Job } from "./Job";
 import { card } from "./cardArray";
+import styles from "./PreviousJobs.module.scss";
 
 export const PreviousJobs = () => {
   return (
-    <div className="page-container">
-      <div className="container">
-        <h1>Check out what we can do!</h1>
-      </div>
+    <div className="container">
+      <h2 className="mb-3">What We Can Do</h2>
 
-      <ul className="cards-container">
+      <div className={`row g-2 mx-auto ${styles.cardsContainer}`}>
         {card.map((item) => (
           <Job key={item.front} front={item.front} label={item.label} />
         ))}
-        <li className="card-items" role="button" tabIndex={0}>
-          <div className="btn btn-outline-dark">View More</div>
-        </li>
-      </ul>
+        <div className="col-12 col-lg-4" role="button" tabIndex={0}>
+          <Link to="/gallery" className={styles.viewMoreCard}>
+            <div className="card h-100">
+              <h2>VIEW MORE</h2>
+            </div>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,61 @@
+.cardsContainer {
+  div figure {
+    margin: 0;
+    background-color: #343a40;
+    color: #ffdd17;
+  }
+}
+
+.viewMoreCard {
+  text-decoration: none;
+  div {
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    color: #ffdd17;
+    transition: all 0.2s linear;
+  }
+  &:hover {
+    h2 {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.cardFig {
+  padding: 10px;
+  position: relative;
+  color: inherit;
+  &::after {
+    content: attr(data-category);
+    position: absolute;
+    bottom: 0;
+    margin-left: 20px;
+    padding: 10px 14px;
+    max-width: calc((100%) - 60px);
+    font-size: 16px;
+    font-weight: 900;
+    color: inherit;
+    background-color: inherit;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+  }
+}
+.cardPic {
+  display: block;
+  max-width: 100%;
+  transition: all 0.2s linear;
+  border-radius: 0.25rem;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cardsContainer {
+    width: 95%;
+  }
+}

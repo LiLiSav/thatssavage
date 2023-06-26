@@ -1,19 +1,20 @@
 import { TextBox } from "./TextBox";
+import styles from "./Introduction.module.scss";
 
 export const Introduction = () => {
   return (
     <div>
-      <div className="full-page-container dgry">
-        <div className="intro-container">
-          <div className="intro-heading">
+      <div className={styles.fullPageContainer}>
+        <div className={styles.introContainer}>
+          <div className={styles.introHeading}>
             <h3>
               <b>For all your design needs, </b>
             </h3>
           </div>
           <div>
-            <img src="/Logo.png" alt="Thatssavage" className="intro-pic-text" />
+            <img src="/Logo.png" alt="Thatssavage" className={styles.introPicText} />
           </div>
-          <div className="intro-heading">
+          <div className={styles.introHeading}>
             <h3>
               <b> has got you covered!</b>
             </h3>
@@ -22,7 +23,7 @@ export const Introduction = () => {
       </div>
       <div>
         <div className="page-container">
-          <ul className="intro-cards-container">
+          <ul className={styles.introCardsContainer}>
             <TextBox title="No Minimum Order">
               We don't do min. orders, there are enough rules in life. If it is personal or for your
               whole business, you can get 1-100+ printed. This could be showbiz baby!

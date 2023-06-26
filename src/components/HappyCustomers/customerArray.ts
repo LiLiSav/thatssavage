@@ -1,7 +1,7 @@
 export const customers = [
   {
-    img: "/customers/clonmany.jpg",
-    label: "Clonmany green and red tops",
+    img: "/customers/bride.jpg",
+    label: "Bride in white on steps",
   },
   {
     img: "/customers/country-fit.jpg",
@@ -12,8 +12,8 @@ export const customers = [
     label: "Hen do with disney character",
   },
   {
-    img: "/customers/bride.jpg",
-    label: "Bride in white on steps",
+    img: "/customers/clonmany.jpg",
+    label: "Clonmany green and red tops",
   },
   {
     img: "/customers/keren-hen.jpg",
