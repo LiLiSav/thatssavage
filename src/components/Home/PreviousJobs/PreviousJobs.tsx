@@ -6,7 +6,7 @@ import styles from "./PreviousJobs.module.scss";
 export const PreviousJobs = () => {
   return (
     <div className="container">
-      <h2 className="mb-3">What We Can Do</h2>
+      <h2 className="headerText">What We Can Do</h2>
 
       <div className={`row g-2 mx-auto ${styles.cardsContainer}`}>
         {card.map((item) => (

@@ -17,6 +17,7 @@
 .footerHeader {
   color: #ffdd17;
   margin-top: 5px;
+  text-align: center;
 }
 
 .footerText {
@@ -49,7 +50,11 @@
 }
 
 .footerSpacing {
+  padding: 0.5rem 1rem;
   margin-bottom: 4vh;
+  a:hover {
+    opacity: 0.5;
+  }
 }
 
 .footerFooter {
@@ -88,6 +93,9 @@
   max-height: 60px;
   margin: 3px;
   border-radius: 50%;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .btnFacebook {
@@ -111,12 +119,4 @@
 .btnLinkedIn {
   @extend .btn;
   background-color: #0976b4;
-}
-
-.btn--:hover {
-  opacity: 0.5;
-}
-
-.footerRowNumber {
-  padding-top: 0.2rem;
 }

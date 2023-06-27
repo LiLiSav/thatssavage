@@ -60,37 +60,35 @@ const Address = () => {
   );
 };
 
-export const Footer = () => {
-  return (
-    <nav className={styles.footerContainer}>
-      <div className={styles.footerItems}>
-        <div className={`${styles.footerRow} ${styles.order1}`}>
-          <h5 className={`${styles.footerHeader} text-center`}>Phone Number</h5>
-          <PhoneNumber />
-        </div>
-
-        <div className={`${styles.footerRow} ${styles.order2}`}>
-          <h5 className={`${styles.footerHeader} text-center`}>Social Media</h5>
-          <SocialMediaButtons />
-        </div>
-
-        <div className={`${styles.footerRow} ${styles.order3}`}>
-          <h5 className={`${styles.footerHeader} text-center mb-0`}>Monaghan Office</h5>
-          <Address />
-        </div>
+export const Footer = () => (
+  <nav className={styles.footerContainer}>
+    <div className={styles.footerItems}>
+      <div className={`${styles.footerRow} ${styles.order1}`}>
+        <h5 className={styles.footerHeader}>Phone Number</h5>
+        <PhoneNumber />
       </div>
 
-      <div className={styles.footerFooter}>
-        Created by{" "}
-        <a
-          className={styles.linkText}
-          href="https://www.linkedin.com/in/liam-savage-72b532101"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Liam
-        </a>
+      <div className={`${styles.footerRow} ${styles.order2}`}>
+        <h5 className={styles.footerHeader}>Social Media</h5>
+        <SocialMediaButtons />
       </div>
-    </nav>
-  );
-};
+
+      <div className={`${styles.footerRow} ${styles.order3}`}>
+        <h5 className={`${styles.footerHeader} mb-0`}>Location</h5>
+        <Address />
+      </div>
+    </div>
+
+    <div className={styles.footerFooter}>
+      Created by{" "}
+      <a
+        className={styles.linkText}
+        href="https://www.linkedin.com/in/liam-savage-72b532101"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Liam
+      </a>
+    </div>
+  </nav>
+);

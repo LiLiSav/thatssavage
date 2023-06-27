@@ -1,5 +1,23 @@
+// ==============
+//  Textbox
+// ==============
+
+.introCardsContainer {
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  text-decoration: none;
+  list-style-type: none;
+  margin-top: -50px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
 .itemContainer {
-  height: 250px;
+  min-height: 210px;
   width: 25vw;
   padding: 20px;
   background-color: white;
@@ -7,6 +25,19 @@
 }
 
 @media screen and (max-width: 960px) {
+  .introCardsContainer {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0px !important;
+    text-align: justify;
+  }
+
   .itemContainer {
     height: auto;
     width: 80vw;
@@ -43,32 +74,7 @@
   vertical-align: bottom;
 }
 
-.introCardsContainer {
-  width: 100%;
-  align-items: center;
-  align-content: center;
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  text-decoration: none;
-  list-style-type: none;
-  margin-top: -50px;
-}
-
 @media screen and (max-width: 960px) {
-  .introCardsContainer {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-    text-decoration: none;
-    list-style-type: none;
-    margin-top: 0;
-    padding: 0px !important;
-    text-align: justify;
-  }
-
   .introContainer {
     width: 100%;
     padding: 20px 0;

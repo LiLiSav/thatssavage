@@ -1,12 +1,12 @@
 import { customers } from "./customerArray";
 import styles from "./Customers.module.scss";
 
-export const HappyCustomers = () => {
+export const Customers = () => {
   return (
-    <div className="container py-5">
-      <h2 className="mb-3">Some Of Our Happy Customers</h2>
+    <div className="container pt-3 pb-5 px-0">
+      <h2 className="headerText">Some Of Our Happy Customers</h2>
 
-      <div className="row g-2">
+      <div className={`row g-2 mx-auto ${styles.widthBox}`}>
         <div className="col-md-6 col-lg-4 d-flex flex-column justify-content-between">
           <img
             className={`${styles.imageBlock} mb-2`}
