@@ -27,14 +27,14 @@ export const Introduction = () => {
             We don't do min. orders, there are enough rules in life. If it is personal or for your
             whole business, you can get 1-100+ printed. This could be showbiz baby!
           </TextBox>
-          <TextBox title="Highest Quality and Service">
-            We promise to work with you to provide the perfect solution for you or your business.
-            From the apparel to the design, we got your back.
-          </TextBox>
           <TextBox title="Irish Owned">
             We take pride in where we are from and what we do. By supporting us you are supporting
             local. We guarantee that what we produce is at the very highest standard and you know
             exactly where it comes from.
+          </TextBox>
+          <TextBox title="Highest Quality & Service">
+            We promise to work with you to provide the perfect solution for you or your business.
+            From the apparel to the design, we got your back.
           </TextBox>
         </ul>
       </div>

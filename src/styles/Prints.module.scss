@@ -1,0 +1,14 @@
+.cardImg {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
+
+.listOfPrints {
+  list-style: none;
+  li::before {
+    content: "✅";
+    display: inline-block;
+    margin-right: 0.2rem;
+  }
+}

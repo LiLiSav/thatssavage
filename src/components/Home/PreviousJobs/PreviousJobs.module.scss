@@ -48,11 +48,7 @@
 .cardPic {
   display: block;
   max-width: 100%;
-  transition: all 0.2s linear;
   border-radius: 0.25rem;
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 
 @media screen and (max-width: 992px) {

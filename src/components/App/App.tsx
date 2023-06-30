@@ -7,7 +7,7 @@ import Graphic from "pages/Graphic";
 import Contact from "pages/Contact";
 import About from "pages/About";
 import Terms from "pages/Terms";
-import Gallery from "pages/Gallery";
+import Prints from "pages/Prints";
 import { NotFound } from "components/NotFound";
 
 export const App = () => {
@@ -17,7 +17,7 @@ export const App = () => {
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/prints" element={<Prints />} />
         <Route path="/graphic-design" element={<Graphic />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/about-us" element={<About />} />

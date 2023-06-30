@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Name from "images/Name.png";
 import styles from "./Navbar.module.scss";
 import { NavItem } from "./NavItem";
 import { navArray } from "./navArray";
@@ -15,7 +14,7 @@ export const Navbar = () => {
     <nav className={styles.navbarTop}>
       <div className={styles.navbarContainer}>
         <Link to="/" className={styles.navbarLogo} rel="logo" onClick={closeMobileMenu}>
-          <img src={Name} style={{ width: "100%" }} alt="Website Logo" />
+          <img src="/Name.png" style={{ width: "100%" }} alt="Website Logo" />
         </Link>
         <div
           className={styles.menuIcon}

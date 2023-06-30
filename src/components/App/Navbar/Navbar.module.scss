@@ -30,6 +30,7 @@
   list-style: none;
   width: 60vw;
   font-size: 1.2em;
+  margin-bottom: 0;
 }
 
 .navMenuActive {
@@ -56,7 +57,7 @@
   display: none;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
   /* Hides the menu off screen to the left. */
   .navMenu {
     background: #242222;
