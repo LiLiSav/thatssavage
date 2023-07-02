@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
+import * as React from "react";
 import { createRoot } from "react-dom/client";
 import "styles/App.global.scss";
 import "react-toastify/dist/ReactToastify.css";
