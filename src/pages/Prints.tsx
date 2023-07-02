@@ -8,17 +8,23 @@ import {
   workWear,
 } from "components/Prints/Arrays";
 
+import partyCollage from "assets/prints/clothes/collage.jpg";
+import fitnessCollage from "assets/prints/fitness/collage.jpg";
+import maskCollage from "assets/prints/otherwear/masks.jpg";
+import workWearCollage from "assets/prints/workwear/collage.jpg";
+import miscCollage from "assets/prints/misc/bottles.jpg";
+
 export interface ImageBlockProps {
   img: string;
   alt: string;
 }
 
 const collagePics = [
-  { title: "Parties", collagePic: "/prints/clothes/collage.jpg", images: clothesImages },
-  { title: "Fitness", collagePic: "/prints/fitness/collage.jpg", images: fitnessImages },
-  { title: "Outerwear", collagePic: "/prints/otherwear/masks.jpg", images: otherWear },
-  { title: "Workwear", collagePic: "/prints/workwear/collage.jpg", images: workWear },
-  { title: "Miscellaneous", collagePic: "/prints/misc/bottles.jpg", images: miscArray },
+  { title: "Parties", collagePic: partyCollage, images: clothesImages },
+  { title: "Fitness", collagePic: fitnessCollage, images: fitnessImages },
+  { title: "Outerwear", collagePic: maskCollage, images: otherWear },
+  { title: "Workwear", collagePic: workWearCollage, images: workWear },
+  { title: "Miscellaneous", collagePic: miscCollage, images: miscArray },
 ];
 
 export default function Prints() {

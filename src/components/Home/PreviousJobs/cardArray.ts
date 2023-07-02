@@ -1,34 +1,19 @@
+import todd from "assets/jobs/todd-work.jpg";
+import jersey from "assets/jobs/jersey.jpg";
+import hens from "assets/jobs/hens.jpg";
+import funny from "assets/jobs/funny-tshirt.jpg";
+import hats from "assets/jobs/hats.jpg";
+import graduates from "assets/jobs/graduates.jpg";
+import totebags from "assets/jobs/totebags.jpg";
+import teddy from "assets/jobs/teddy.jpg";
+
 export const cards = [
-  {
-    front: "/jobs/todd-work.jpg",
-    label: "Work Attire",
-  },
-  {
-    front: "/jobs/jersey.jpg",
-    label: "Fitness Wear",
-  },
-  {
-    front: "/jobs/hens.jpg",
-    label: "Hen & Stag Parties",
-  },
-  {
-    front: "/jobs/funny-tshirt.jpg",
-    label: "Funny T-shirts",
-  },
-  {
-    front: "/jobs/hats.jpg",
-    label: "Headwear",
-  },
-  {
-    front: "/jobs/graduates.jpg",
-    label: "Graduation",
-  },
-  {
-    front: "/jobs/totebags.jpg",
-    label: "Tote Bags",
-  },
-  {
-    front: "/jobs/teddy.jpg",
-    label: "Toys",
-  },
+  { img: todd, label: "Work Attire" },
+  { img: jersey, label: "Fitness Wear" },
+  { img: hens, label: "Hen & Stag Parties" },
+  { img: funny, label: "Funny T-shirts" },
+  { img: hats, label: "Headwear" },
+  { img: graduates, label: "Graduation" },
+  { img: totebags, label: "Tote Bags" },
+  { img: teddy, label: "Toys" },
 ];

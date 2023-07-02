@@ -10,7 +10,7 @@ export const PreviousJobs = () => {
 
       <div className={`row g-2 mx-auto ${styles.cardsContainer}`}>
         {cards.map((item) => (
-          <Job key={item.front} front={item.front} label={item.label} />
+          <Job key={item.label} front={item.img} label={item.label} />
         ))}
         <div className="col-12 col-lg-4" role="button" tabIndex={0}>
           <Link to="/prints" className={styles.viewMoreCard}>

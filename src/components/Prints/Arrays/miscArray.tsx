@@ -1,28 +1,16 @@
+import coraBag from "assets/prints/misc/coraBag.jpg";
+import penguins from "assets/prints/misc/penguins.jpg";
+import pillow from "assets/prints/misc/pillow.jpg";
+import schoolBag from "assets/prints/misc/schoolBag.jpg";
+import belts from "assets/prints/misc/belts.jpg";
+import flag from "assets/prints/misc/flag.jpg";
 import { ImageBlockProps } from "pages/Prints";
 
 export const miscArray: ImageBlockProps[] = [
-  {
-    img: "/prints/misc/coraBag.jpg",
-    alt: "Small wetproof bags",
-  },
-  {
-    img: "/prints/misc/penguins.jpg",
-    alt: "penguings with printing on belly",
-  },
-  {
-    img: "/prints/misc/pillow.jpg",
-    alt: "pillow for nana",
-  },
-  {
-    img: "/prints/misc/schoolBag.jpg",
-    alt: "School bag",
-  },
-  {
-    img: "/prints/misc/belts.jpg",
-    alt: "Lifting belts",
-  },
-  {
-    img: "/prints/misc/flag.jpg",
-    alt: "Flag with paddy on it",
-  },
+  { img: coraBag, alt: "Small wetproof bags" },
+  { img: penguins, alt: "penguings with printing on belly" },
+  { img: pillow, alt: "pillow for nana" },
+  { img: schoolBag, alt: "School bag" },
+  { img: belts, alt: "Lifting belts" },
+  { img: flag, alt: "Flag with paddy on it" },
 ];
