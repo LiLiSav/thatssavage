@@ -70,7 +70,7 @@ export const Form = (props: FormProps) => {
     <form onSubmit={handleSubmit(submitForm)} className="row g-3">
       {/* NAME */}
       <div className="col-md-6">
-        <label htmlFor="name" className="form-label">
+        <label htmlFor="name" className="form-label fw-bold">
           Name <span className={styles.isRequired}>*</span>
         </label>
         <div className={inputColor("name")}>
@@ -86,7 +86,7 @@ export const Form = (props: FormProps) => {
 
       {/* PHONE NUMBER */}
       <div className="col-md-6">
-        <label htmlFor="phone" className="form-label">
+        <label htmlFor="phone" className="form-label fw-bold">
           Phone Number
         </label>
         <div className={inputColor("phone")}>
@@ -102,7 +102,7 @@ export const Form = (props: FormProps) => {
 
       {/* EMAIL ADDRESS */}
       <div className="col-12">
-        <label htmlFor="email" className="form-label">
+        <label htmlFor="email" className="form-label fw-bold">
           Email Address <span className={styles.isRequired}>*</span>
         </label>
         <div className={inputColor("email")}>
@@ -118,7 +118,7 @@ export const Form = (props: FormProps) => {
 
       {/* MESSAGE */}
       <div className="col-12">
-        <label htmlFor="message" className="form-label">
+        <label htmlFor="message" className="form-label fw-bold">
           Message <span className={styles.isRequired}>*</span>
         </label>
         <div className={inputColor("message")}>
@@ -144,10 +144,10 @@ export const Form = (props: FormProps) => {
           </label>
           <input id="check" className="form-check-input" type="checkbox" {...register("check")} />
         </div>
+        <p className={styles.isRequiredText}>* Required</p>
       </div>
       {/* SUBMIT */}
       <div>
-        <p className={styles.isRequiredText}>* Required</p>
         <button
           className={`btn mt-0 mb-1 ${isSubmitted ? styles.submitButton : "btn-warning"}`}
           type="submit"

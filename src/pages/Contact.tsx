@@ -42,11 +42,11 @@ export default function Contact() {
     <div className={`${styles.cardContainer} container card shadow p-5 mb-3 mt-3`}>
       <h1 className="title text-warning">Contact Us</h1>
       <hr />
-      <h4 className="pb-3">
+      <p className="pb-3 fw-bold">
         Got a question? Want a quote? Got some feedback? Don&apos;t hesitate to get in contact and
         we will be happy to help.
-      </h4>
-      <div className="fw-bold">
+      </p>
+      <div>
         <Form loading={loading} submitForm={submitForm} formIsSent={formIsSent} />
       </div>
     </div>
