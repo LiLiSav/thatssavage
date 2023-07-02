@@ -14,11 +14,11 @@ export default function About() {
       </p>
       <h2 className="headerText">FAQs</h2>
       <p>
-        <b className="text-warning">How much does a t-shirt usually cost?</b> As a really rough
-        estimate, T-shirts start from €12-15 upwards. The price depends on many factors like how
-        many t-shirts you want, what size t-shirt, the amount of colours and type of printing, and
-        how quick you want it among other things. This is why it is best to get in contact for a
-        quote.
+        <b className="text-warning">How much does a t-shirt/ jumper/ hoodie cost?</b> As a really
+        rough estimate, T-shirts start from €12-15 upwards while jumpers and hoodies from €15-18
+        upwards. The prices depends on many factors like how many items you want, what size of
+        clothing, the amount of colours and type of printing you want, and how fast you need the job
+        done among other things. This is why it is best to get in contact for a quote.
       </p>
 
       <p>
