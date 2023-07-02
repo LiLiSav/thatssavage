@@ -137,7 +137,7 @@ export const Form = (props: FormProps) => {
         <div className="form-check">
           <label className="form-check-label" htmlFor="check">
             I have read and agree to the{" "}
-            <Link className={styles.terms} to="/terms-and-conditions">
+            <Link className="yellowLink" to="/terms-and-conditions">
               Terms and Conditions
             </Link>{" "}
             <span className={styles.isRequired}>*</span>
@@ -146,7 +146,8 @@ export const Form = (props: FormProps) => {
         </div>
       </div>
       {/* SUBMIT */}
-      <div className="mb-3">
+      <div>
+        <p className={styles.isRequiredText}>* Required</p>
         <button
           className={`btn mt-0 mb-1 ${isSubmitted ? styles.submitButton : "btn-warning"}`}
           type="submit"

@@ -8,6 +8,10 @@
   padding-bottom: 3rem;
 }
 
-.title {
-  font-size: 4rem;
+.yellowLink {
+  color: rgb(255, 193, 7);
+  text-decoration: none;
+  &:hover {
+    color: rgb(212, 161, 7);
+  }
 }

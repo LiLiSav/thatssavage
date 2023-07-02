@@ -13,8 +13,8 @@ import { NotFound } from "components/NotFound";
 export const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <ToastContainer />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/prints" element={<Prints />} />

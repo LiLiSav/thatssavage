@@ -20,7 +20,6 @@
 
 .navbarLogo {
   margin-left: 20px;
-  cursor: pointer;
   max-width: 225px;
 }
 
@@ -58,6 +57,10 @@
 }
 
 @media screen and (max-width: 992px) {
+  .navbarLogo {
+    margin-left: 0;
+  }
+
   /* Hides the menu off screen to the left. */
   .navMenu {
     background: #242222;

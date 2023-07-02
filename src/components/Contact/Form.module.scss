@@ -1,5 +1,4 @@
 .cardContainer {
-  width: 60%;
   background-color: #a7a9ac;
 }
 
@@ -31,22 +30,12 @@
   }
 }
 
-.terms {
-  color: rgb(255, 193, 7);
-  text-decoration: none;
-  font-size: 15px;
-  &:hover {
-    color: rgb(212, 161, 7);
-  }
-}
-
 .isRequired {
   color: #be3144;
 }
 
 .isRequiredText {
   @extend .isRequired;
-  margin: 0;
 }
 
 .submitButton:disabled {

@@ -39,14 +39,13 @@ export default function Contact() {
   };
 
   return (
-    <div className={`${styles.cardContainer} container card shadow px-5 my-4`}>
-      <h2 className="title text-warning pt-3">Contact Us</h2>
-      <h4>
+    <div className={`${styles.cardContainer} container card shadow p-5 mb-3 mt-3`}>
+      <h1 className="title text-warning">Contact Us</h1>
+      <hr />
+      <h4 className="pb-3">
         Got a question? Want a quote? Got some feedback? Don&apos;t hesitate to get in contact and
         we will be happy to help.
       </h4>
-      <p className={styles.isRequiredText}>* Required</p>
-      <hr />
       <div className="fw-bold">
         <Form loading={loading} submitForm={submitForm} formIsSent={formIsSent} />
       </div>
