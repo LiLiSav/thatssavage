@@ -1,6 +1,7 @@
-export interface FormProps {
+export interface FormValueTypes {
   name: string;
-  surname: string;
+  phone: string;
   email: string;
   message: string;
+  check: boolean;
 }

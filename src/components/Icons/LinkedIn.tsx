@@ -5,10 +5,11 @@ export const LinkedInIcon = () => {
       focusable="false"
       data-prefix="fab"
       data-icon="linkedin-in"
-      className="svg-inline--fa fa-linkedin-in fa-2x "
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
+      width={25}
+      height={25}
     >
       <path
         fill="currentColor"

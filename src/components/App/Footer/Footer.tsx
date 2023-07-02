@@ -40,23 +40,23 @@ const SocialMediaButtons = () => {
 };
 const Address = () => {
   return (
-    <a
-      className={`text-light nav-link ${styles.footerSpacing}`}
-      href="https://goo.gl/maps/gv5ke2gXp7STHdPe7"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <PinIcon />
-      Carrickaderry, Clontibret,
-      <br />
-      Monaghan, H18 X058
-    </a>
+    <div className={styles.footerSpacing}>
+      <a
+        className="text-light nav-link"
+        href="https://goo.gl/maps/gv5ke2gXp7STHdPe7"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <PinIcon />
+        Monaghan, H18 X058
+      </a>
+    </div>
   );
 };
 
 const Email = () => {
   return (
-    <div className={`${styles.footerRowNumber} ${styles.footerSpacing}`}>
+    <div className={styles.footerSpacing}>
       <a href="mailto:declan.thatssavage@gmail.com" className="text-light nav-link">
         <EmailIcon /> declan.thatssavage@gmail.com
       </a>

@@ -1,3 +1,4 @@
+export { CheckIcon } from "./Check";
 export { PinIcon } from "./Pin";
 export { EmailIcon } from "./Email";
 export { LinkedInIcon } from "./LinkedIn";

@@ -1,0 +1,84 @@
+.cardContainer {
+  width: 60%;
+  background-color: #a7a9ac;
+}
+
+.form {
+  input,
+  textarea {
+    outline: none;
+  }
+}
+
+.formBad {
+  @extend .form;
+  input,
+  textarea {
+    border: 1px solid red;
+    &:focus {
+      box-shadow: 0 0 10px red;
+    }
+  }
+}
+.formGood {
+  @extend .form;
+  input,
+  textarea {
+    border: 1px solid green;
+    &:focus {
+      box-shadow: 0 0 10px green;
+    }
+  }
+}
+
+.terms {
+  color: rgb(255, 193, 7);
+  text-decoration: none;
+  font-size: 15px;
+  &:hover {
+    color: rgb(212, 161, 7);
+  }
+}
+
+.isRequired {
+  color: #be3144;
+}
+
+.isRequiredText {
+  @extend .isRequired;
+  margin: 0;
+}
+
+.submitButton:disabled {
+  color: white;
+  background-color: green;
+  svg {
+    -webkit-transition: 3s ease 0s normal forwards 1 fadein;
+    -moz-transition: 3s ease 0s normal forwards 1 fadein;
+    transition: 3s ease 0s normal forwards 1 fadein;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

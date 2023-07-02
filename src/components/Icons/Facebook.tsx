@@ -5,10 +5,11 @@ export const FacebookIcon = () => {
       focusable="false"
       data-prefix="fab"
       data-icon="facebook-f"
-      className="svg-inline--fa fa-facebook-f fa-2x "
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 320 512"
+      width={28}
+      height={28}
     >
       <path
         fill="currentColor"

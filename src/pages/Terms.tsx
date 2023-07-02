@@ -2,7 +2,6 @@ export default function Terms() {
   return (
     <div className="container shadow p-5 mb-3 mt-3 card">
       <h1>Terms and Conditions</h1>
-      <p>Last updated: January 03, 2021</p>
       <p>Please read these terms and conditions carefully before using Our Service.</p>
       <h1>Interpretation and Definitions</h1>
       <h2>Interpretation</h2>
