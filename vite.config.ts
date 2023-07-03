@@ -4,7 +4,15 @@ import viteTsconfigPaths from "vite-tsconfig-paths";
 import svgrPlugin from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
-  base: "/thatssavage/",
+export default defineConfig(({ command }) => {
+  const config = {
+    plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
+    base: "/",
+  };
+
+  if (command !== "serve") {
+    config.base = "/thatssavage/";
+  }
+
+  return config;
 });
