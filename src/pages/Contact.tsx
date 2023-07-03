@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { SubmitHandler } from "react-hook-form";
 import styles from "components/Contact/Form.module.scss";
 import { Form } from "components/Contact";
-import { FormValueTypes } from "types/form";
+import { FormSubmission, FormValueTypes } from "types/form";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -12,7 +12,8 @@ export default function Contact() {
   const submitForm: SubmitHandler<FormValueTypes> = async (data: FormValueTypes) => {
     setLoading(true);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { check, ...formData } = data;
+    const { check, ...formData }: FormSubmission = data;
+    if (!formData.phone) delete formData.phone;
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",

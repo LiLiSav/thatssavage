@@ -15,40 +15,37 @@ export default function About() {
       <h2 className="headerText">FAQs</h2>
       <p>
         <b className="text-warning">How much does a t-shirt/ jumper/ hoodie cost?</b> As a really
-        rough estimate, T-shirts start from €12-15 upwards while jumpers and hoodies from €15-18
+        rough estimate, T-shirts start from €20-25 upwards while jumpers and hoodies from €35
         upwards. The prices depends on many factors like how many items you want, what size of
         clothing, the amount of colours and type of printing you want, and how fast you need the job
-        done among other things. This is why it is best to get in contact for a quote.
+        done among other things. Bulk orders apply and the more items you buy the lower the price
+        will be per item of clothing. This is why it is best to get in contact for a quote.
       </p>
 
       <p>
-        <b className="text-warning">How long does a print job take?</b> We strive to have your order
-        printed in a week. If orders are quite large or the order is in a busy periods like
-        Christmas, it can take up to 10 days to get clothes and printing supplies shipped to That's
-        Savage.
+        <b className="text-warning">How long does a print job take?</b> If the garment you require
+        is in stock, it may only take 1-2 days. If your order needs to be specifically ordered in,
+        it may take up to two weeks for an order to be completed. During busy periods like Christmas
+        shipping times can vary to That's Savage.
       </p>
 
       <p>
         <b className="text-warning">Do you supply clothes for print?</b> Of course! Discuss with us
-        what sort of color and size clothing you want and we can order it in for you.
+        what sort of color and size clothing you want and we can order in the vast majority of
+        garments for printing for you. If you have a football jersey required for printing, its best
+        that is supplied by the customer.
       </p>
 
       <p className="m-0">
-        <b className="text-warning">Can I bring my own clothes to get printed?</b> Absolutely, check
-        out some of the prints for ideas of what people have brought to us.
+        <b className="text-warning">Can I bring my own clothes to get printed?</b> Absolutely, if
+        you want to supply garments that you'd prefer printed, that's not a problem.
       </p>
 
       <h2 className="headerText">The Nitty Gritty</h2>
 
       <p>
-        Using three different methods for printing; Sublimation Print, Vinyl Transfer and DTG
-        (direct to garment), the perfect print can be made especially for you.
-      </p>
-
-      <p>
-        <b className="text-warning">Sublimation Print:</b> Heat pressed at 190 degrees, these
-        transfers are suited for polyester jersey type material. Our sublimation process works best
-        on light colours allowing your design to really stand out. Max print size, A4.
+        The perfect print can be made especially for you using different methods for printing like
+        Vinyl Transfer and DTG (direct to garment).
       </p>
 
       <p>

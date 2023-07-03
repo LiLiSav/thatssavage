@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useEffect } from "react";
 import { FormValueTypes } from "types/form";
 import { CheckIcon } from "components/Icons";
 import styles from "./Form.module.scss";
@@ -12,6 +13,8 @@ const defaultValues: FormValueTypes = {
   email: "",
   message: "",
   check: false,
+  subject: "",
+  from_name: "That's Savage",
 };
 
 const phoneRegExp =
@@ -31,6 +34,8 @@ const schema = yup.object().shape(
     email: yup.string().min(3).max(50).email().required(),
     message: yup.string().min(3).max(200).required(),
     check: yup.boolean().oneOf([true]).required(),
+    subject: yup.string().required(),
+    from_name: yup.string().required(),
   },
   [["phone", "phone"]]
 );
@@ -46,8 +51,16 @@ export const Form = (props: FormProps) => {
   const {
     register,
     handleSubmit,
+    watch,
+    setValue,
     formState: { dirtyFields, errors, isSubmitted, isValid },
   } = useForm<FormValueTypes>({ defaultValues, mode: "onChange", resolver: yupResolver(schema) });
+
+  const watchName = watch("name", "Someone");
+
+  useEffect(() => {
+    setValue("subject", `New Form Submission from ${watchName}`);
+  }, [watchName, setValue]);
 
   const inputColor = (field: keyof FormValueTypes) => {
     if (errors[field]) return styles.formBad;
@@ -68,6 +81,8 @@ export const Form = (props: FormProps) => {
 
   return (
     <form onSubmit={handleSubmit(submitForm)} className="row g-3">
+      <input type="hidden" {...register("from_name")}></input>
+      <input type="hidden" {...register("subject")} />
       {/* NAME */}
       <div className="col-md-6">
         <label htmlFor="name" className="form-label fw-bold">
