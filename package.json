@@ -5,9 +5,8 @@
   "private": true,
   "scripts": {
     "start": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "build": "tsc && vite build",
+    "deploy": "gh-pages -d dist",
     "serve": "vite preview"
   },
   "dependencies": {
