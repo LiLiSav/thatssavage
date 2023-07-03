@@ -12,7 +12,7 @@ import { NotFound } from "components/NotFound";
 
 export const App = () => {
   return (
-    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/thatssavage/"}>
+    <BrowserRouter>
       <ToastContainer />
       <Navbar />
       <Routes>
