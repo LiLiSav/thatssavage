@@ -1,0 +1,28 @@
+{
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 100,
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+  },
+  "eslint.validate": [
+    "markdown",
+    "mdx",
+    "javascript",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.eol": "\r\n",
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
+}

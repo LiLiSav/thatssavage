@@ -1,0 +1,101 @@
+.footerContainer {
+  padding-top: 4vh;
+  background: #343a40;
+  height: auto;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footerItems {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footerHeader {
+  color: #ffdd17;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.footerText {
+  color: white;
+}
+
+.footerRow {
+  margin: 0px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .footerRow {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footerRow {
+    width: 100%;
+  }
+}
+
+.footerSpacing {
+  padding: 0.5rem 1rem;
+  margin-bottom: 4vh;
+  a:hover {
+    opacity: 0.5;
+  }
+}
+
+.footerFooter {
+  margin: 0 10vh;
+  border-color: darkslategray;
+  color: #a7a9ac;
+  border-top: solid 1px;
+  height: auto;
+  text-align: right;
+  padding-bottom: 5px;
+}
+
+.linkText {
+  color: inherit;
+  &:hover {
+    color: hotpink;
+  }
+}
+
+.btn {
+  color: white;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 3px;
+  border-radius: 50%;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.btnFacebook {
+  @extend .btn;
+  background-color: #3b5998;
+}
+
+.btnInsta {
+  @extend .btn;
+  background-color: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.btnLinkedIn {
+  @extend .btn;
+  background-color: #0976b4;
+}
