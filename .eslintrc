@@ -14,7 +14,6 @@
     "prettier"
   ],
   "settings": {
-    "mdx/code-blocks": true,
     "react": { "version": "detect" },
     "import/parsers": { "@typescript-eslint/parser": [".ts", ".tsx"] },
     "import/resolver": { "typescript": { "alwaysTryTypes": true } }
@@ -38,6 +37,5 @@
     "react/require-default-props": "off",
     "sort-imports": ["error", { "ignoreCase": true, "ignoreDeclarationSort": true }]
   },
-  "overrides": [{ "files": ["*.mdx"], "rules": { "react/jsx-no-undef": "off" } }],
-  "ignorePatterns": ["node_modules", ".next", "build", "dist", "public"]
+  "ignorePatterns": ["node_modules", ".next", "build", "dist", "public", "README.md"]
 }

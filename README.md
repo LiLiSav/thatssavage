@@ -13,8 +13,14 @@ That's Savage
 - `npm start`: Local development on server http://localhost:5173/.
 - `npm run deploy`: Uses gh-pages to build the project and deploy on Github with our own domain.
 
+## Deployment
+
+- `npm run build`: Run this and check if everything looks as expected by running `npm run preview`.
+- `npm run deploy`: if the preview looks good, deploy it.
+
 ## Contributors
 
-| Author          | LinkedIn                                                         | Github                                |
-| --------------- | ---------------------------------------------------------------- | ------------------------------------- |
-| **Liam Savage** | [liam-savage](https://www.linkedin.com/in/liam-savage-72b532101) | [LiLiSav](https://github.com/LiLiSav) |
+| Author             | LinkedIn                                                         | Github                                              |
+| ------------------ | ---------------------------------------------------------------- | --------------------------------------------------- |
+| **Liam Savage**    | [liam-savage](https://www.linkedin.com/in/liam-savage-72b532101) | [LiLiSav](https://github.com/LiLiSav)               |
+| **Michael Savage** | [michaelssavage](https://www.linkedin.com/in/michaelssavage)     | [michaelssavage](https://github.com/michaelssavage) |
