@@ -56,3 +56,12 @@
     width: 95%;
   }
 }
+
+@media screen and (max-width: 428px) {
+  .cardFig::after {
+    margin-left: 0px;
+    padding: 10px 14px;
+    max-width: calc((100%) - 10px);
+    font-size: 14px;
+  }
+}

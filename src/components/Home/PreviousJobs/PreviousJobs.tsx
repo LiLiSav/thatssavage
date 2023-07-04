@@ -15,7 +15,7 @@ export const PreviousJobs = () => {
         <div className="col-12 col-lg-4" role="button" tabIndex={0}>
           <Link to="/prints" className={styles.viewMoreCard}>
             <div className="card h-100">
-              <h2>VIEW MORE</h2>
+              <h2 className="m-0 py-2">VIEW MORE</h2>
             </div>
           </Link>
         </div>

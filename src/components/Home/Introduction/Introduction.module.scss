@@ -41,6 +41,16 @@
   .itemContainer {
     height: auto;
     width: 80vw;
+    min-height: 150px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .itemContainer {
+    width: 95%;
   }
 }
 

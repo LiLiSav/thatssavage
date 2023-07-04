@@ -6,7 +6,7 @@ const ImageBlock = (images: ImageBlockProps[]) => {
       <div className="row g-2 mx-auto">
         {images.map(({ img, alt }) => {
           return (
-            <div key={alt} className="col-4" tabIndex={0}>
+            <div key={alt} className="col-6 col-md-4" tabIndex={0}>
               <div className="card">
                 <img src={img} alt={alt} />
               </div>

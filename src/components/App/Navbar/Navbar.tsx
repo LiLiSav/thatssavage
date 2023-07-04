@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { CloseIcon, MenuIcon } from "components/Icons";
 import styles from "./Navbar.module.scss";
 import { NavItem } from "./NavItem";
 import { navArray } from "./navArray";
@@ -23,7 +24,7 @@ export const Navbar = () => {
           role="button"
           tabIndex={0}
         >
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          {click ? <CloseIcon /> : <MenuIcon />}
         </div>
         <ul className={click ? `${styles.navMenu} ${styles.active}` : styles.navMenu}>
           {navArray.map((navItem) => {

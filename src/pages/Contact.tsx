@@ -40,8 +40,8 @@ export default function Contact() {
   };
 
   return (
-    <div className={`${styles.cardContainer} container card shadow p-5 mb-3 mt-3`}>
-      <h1 className="title text-warning">Contact Us</h1>
+    <div className={`${styles.cardContainer} container card shadow p-4 p-md-5 mb-md-3 mt-md-3`}>
+      <h1 className="title text-warning fw-bold">Contact Us</h1>
       <hr />
       <p className="pb-3 fw-bold">
         Got a question? Want a quote? Got some feedback? Don&apos;t hesitate to get in contact and

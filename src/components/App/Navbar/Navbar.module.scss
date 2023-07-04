@@ -91,12 +91,16 @@
       border-radius: 0;
     }
   }
+  .navbarContainer {
+    width: 100vw;
+    padding: 0 2rem;
+  }
   .menuIcon {
     cursor: pointer;
     display: flex;
     color: #ffdd17;
     font-size: 2.2rem;
-    padding-left: 1em;
+    margin-left: auto;
   }
 }
 

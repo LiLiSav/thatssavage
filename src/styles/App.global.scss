@@ -5,13 +5,24 @@
 
 .headerText {
   transform: rotate(-4deg);
+  margin: 0 2rem;
   padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+  .headerText {
+    transform: rotate(-4deg);
+    margin: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .yellowLink {
   color: rgb(255, 193, 7);
+  font-weight: bold;
   text-decoration: none;
   &:hover {
-    color: rgb(212, 161, 7);
+    color: rgb(238, 181, 10);
+    text-decoration: underline;
   }
 }

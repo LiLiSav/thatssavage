@@ -1,3 +1,5 @@
+export { MenuIcon } from "./Menu";
+export { CloseIcon } from "./Close";
 export { CheckIcon } from "./Check";
 export { PinIcon } from "./Pin";
 export { EmailIcon } from "./Email";
