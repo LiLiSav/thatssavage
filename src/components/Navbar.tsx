@@ -5,6 +5,7 @@ import { contents, PageEntry, pageLabel } from "./pages";
 
 interface NavItemProps {
   item: PageEntry;
+  tint: string;
   isActive: boolean;
   collapsed: boolean;
 }
@@ -12,8 +13,10 @@ interface NavItemProps {
 const sheet = "mx-auto w-full max-w-sheet px-gutter";
 const smallLabel = "font-label text-sm tracking-label";
 
+const tints = ["bg-lemon", "bg-aqua", "bg-salmon", "bg-chartreuse"];
+
 const cell =
-  "flex min-h-11 items-center gap-2 px-3 py-2 no-underline hover:bg-ink/80 hover:text-paper aria-[current=page]:bg-ink aria-[current=page]:text-paper aria-[current=page]:hover:bg-ink";
+  "flex min-h-12 items-center gap-2 px-3 py-2 no-underline hover:bg-ink hover:text-paper aria-[current=page]:bg-ink aria-[current=page]:text-paper";
 
 const Rule = () => (
   <div className={sheet} aria-hidden="true">
@@ -21,14 +24,14 @@ const Rule = () => (
   </div>
 );
 
-const NavItem = ({ item, isActive, collapsed }: NavItemProps) => (
-  <li className="bg-paper">
+const NavItem = ({ item, tint, isActive, collapsed }: NavItemProps) => (
+  <li className={tint}>
     <Link
       to={item.link}
       aria-current={isActive ? "page" : undefined}
       className={`${cell} ${collapsed ? "max-sm:justify-center max-sm:px-1" : ""} text-ink`}
     >
-      <span className="flex flex-col leading-tight font-label text-base font-semibold tracking-label uppercase">
+      <span className="font-masthead text-sm leading-tight uppercase md:text-lg">
         {item.name}
       </span>
     </Link>
@@ -73,16 +76,18 @@ export const Navbar = () => {
             <div
               className={`${smallLabel} order-1 border-2 border-ink px-3 py-2 uppercase`}
             >
-              Printed
-              <br />
-              to order
+              <img
+                src="/celtic.png"
+                alt="celtic stamp"
+                className="print-photo h-14 w-auto"
+              />
             </div>
 
             <Link
               to="/"
               className="masthead order-3 col-span-2 text-ink no-underline hover:text-ink lg:order-2 lg:col-span-1"
             >
-              <span className="masthead-word ink-in misregister">
+              <span className="masthead-word ink-in misregister ink-flamingo">
                 <span className="block sm:inline">THAT&apos;S</span>{" "}
                 <span className="block sm:inline">SAVAGE</span>
               </span>
@@ -93,10 +98,8 @@ export const Navbar = () => {
                 className={`${smallLabel} border-2 border-ink px-3 py-2 uppercase`}
               >
                 <img
-                  src="/logo-head.png"
-                  alt=""
-                  width={40}
-                  height={56}
+                  src="/eire.png"
+                  alt="eire stamp"
                   className="print-photo h-14 w-auto"
                 />
               </div>
@@ -104,8 +107,8 @@ export const Navbar = () => {
           </div>
 
           <p className="mt-3 mb-0 text-center text-base italic">
-            Custom garment printing &amp; logo design · Made in Ireland (
-            <span lang="ga">Déanta in Éirinn</span>)
+            Custom garment printing &amp; logo design ·{" "}
+            <span lang="ga">Déanta in Éirinn</span> (Made in Ireland)
           </p>
         </div>
         <Rule />
@@ -117,14 +120,15 @@ export const Navbar = () => {
       >
         <div className={`${sheet} flex items-center gap-4`}>
           <ul
-            className={`m-0 grid w-full list-none gap-px border border-ink bg-ink p-0 ${
+            className={`m-0 grid w-full list-none gap-px border-2 border-ink bg-ink p-0 ${
               collapsed ? "grid-cols-4" : "grid-cols-2 md:grid-cols-4"
             }`}
           >
-            {contents.map((item) => (
+            {contents.map((item, index) => (
               <NavItem
                 key={item.link}
                 item={item}
+                tint={tints[index]}
                 isActive={pathname === item.link}
                 collapsed={collapsed}
               />

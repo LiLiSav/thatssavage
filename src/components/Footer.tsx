@@ -1,34 +1,26 @@
 import { Link } from "@tanstack/react-router";
-import {
-  EmailIcon,
-  FacebookIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  PinIcon,
-  TelephoneIcon,
-  WhatsappIcon,
-} from "components/Icons";
+import { PinIcon } from "components/Icons";
+import { irishDate } from "utils/irishDate";
 
 const item =
   "flex min-h-11 items-center gap-2 text-ink no-underline hover:text-ink hover:underline [&_svg]:size-6 [&_svg]:shrink-0";
 
 export const Footer = () => (
-  <footer className="overflow-hidden">
-    <div className="mx-auto w-full max-w-sheet px-gutter" aria-hidden="true">
-      <div className="rule-double" />
-    </div>
-    <div className="mx-auto w-full max-w-sheet px-gutter pt-6 pb-4">
+  <footer className="ink-noise mt-12 overflow-hidden border-t-2 border-ink bg-lemon">
+    <div className="mx-auto w-full max-w-sheet px-gutter py-8">
       <div className="grid gap-8 md:grid-cols-3 md:gap-0">
         <section className="md:pr-6">
-          <h2 className="kicker mb-3">Printed in Monaghan</h2>
+          <h2 className="kicker mb-3 font-masthead text-xl tracking-normal">
+            Printed in Monaghan
+          </h2>
           <a href="https://goo.gl/maps/gv5ke2gXp7STHdPe7" className={item}>
             <PinIcon /> Monaghan, H18 X058
           </a>
           <a href="tel:+353872105305" className={item}>
-            <TelephoneIcon /> +353 87 210 5305
+            +353 87 210 5305
           </a>
           <a href="mailto:declansavo@hotmail.com" className={item}>
-            <EmailIcon /> declansavo@hotmail.com
+            declansavo@hotmail.com
           </a>
           <a
             href="https://wa.me/353872105305"
@@ -36,19 +28,21 @@ export const Footer = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <WhatsappIcon /> WhatsApp
+            WhatsApp
           </a>
         </section>
 
         <section className="md:border-l md:border-ink md:px-6">
-          <h2 className="kicker mb-3">Find us</h2>
+          <h2 className="kicker mb-3 font-masthead text-xl tracking-normal">
+            Find us
+          </h2>
           <a
             href="https://www.facebook.com/thatssavage"
             target="_blank"
             rel="noreferrer"
             className={item}
           >
-            <FacebookIcon /> Facebook
+            Facebook
           </a>
           <a
             href="https://www.instagram.com/thatssavage.print"
@@ -56,7 +50,7 @@ export const Footer = () => (
             rel="noreferrer"
             className={item}
           >
-            <InstagramIcon /> Instagram
+            Instagram
           </a>
           <a
             href="https://www.linkedin.com/in/declan-savage-a972b424"
@@ -64,12 +58,14 @@ export const Footer = () => (
             rel="noreferrer"
             className={item}
           >
-            <LinkedInIcon /> LinkedIn
+            LinkedIn
           </a>
         </section>
 
         <section className="md:border-l md:border-ink md:pl-6">
-          <h2 className="kicker mb-3">Notices</h2>
+          <h2 className="kicker mb-3 font-masthead text-xl tracking-normal">
+            Notices
+          </h2>
           <Link to="/terms-and-conditions" className={item}>
             Terms and conditions
           </Link>
@@ -83,13 +79,22 @@ export const Footer = () => (
             >
               Liam
             </a>{" "}
-            · {new Date().getFullYear()}
+            and{" "}
+            <a
+              className="text-ink hover:text-ink"
+              href="https://www.linkedin.com/in/michaelssavage/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Michael
+            </a>
+            {` · ${irishDate().year}`}
           </p>
           <div
             aria-hidden="true"
-            className="mt-5 inline-block -rotate-6 border-4 border-double border-paper bg-tomato px-4 py-2 text-center font-label leading-tight font-bold tracking-label text-paper uppercase"
+            className="mt-5 inline-block -rotate-6 border-4 border-double border-paper bg-royal px-4 py-2 text-center font-masthead leading-tight text-white uppercase"
           >
-            Made in Ireland
+            Made in Muineachán
           </div>
         </section>
       </div>

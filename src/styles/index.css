@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "react-toastify/dist/ReactToastify.css";
 
-/* Self-hosted fonts (Latin + Latin-Extended cover the Irish fada). Each family has one job, see tasks/DESIGN-BRIEF.md. */
+/* Self-hosted fonts (Latin + Latin-Extended cover the Irish fada). */
 @import "@fontsource/chango/latin-400.css";
 @import "@fontsource/chango/latin-ext-400.css";
 @import "@fontsource/bungee-inline/latin-400.css";
@@ -17,12 +17,44 @@
 @import "@fontsource-variable/oswald/wght.css";
 
 @theme {
-  /* Two-spot-colour print job: paper, ink, yellow, tomato. */
-  --color-paper: #f2ead0;
+  --color-paper: #ffffff;
   --color-paper-shade: #e8debf;
   --color-ink: #141210;
   --color-yellow: #ffdd17;
   --color-tomato: #e4472b;
+
+  /* Riso ink palette (AGENTS.md). Black and white come from Tailwind. */
+  --color-blush: #f2cdcf;
+  --color-lemon: #ffe800;
+  --color-chartreuse: #e3ed55;
+  --color-cornflower: #62a8e5;
+  --color-cobalt: #0078bf;
+  --color-ochre: #bb8b41;
+  --color-stone: #88898a;
+  --color-salmon: #ff8e91;
+  --color-marigold: #ffb511;
+  --color-fern: #67b346;
+  --color-aqua: #5ec8e5;
+  --color-royal: #3255a4;
+  --color-terracotta: #bd6439;
+  --color-bubblegum: #f984ca;
+  --color-tangerine: #ff6c2f;
+  --color-kelly: #00a95c;
+  --color-seafoam: #82d8d5;
+  --color-denim: #3d5588;
+  --color-mulberry: #914e72;
+  --color-flamingo: #ff48b0;
+  --color-coral: #ff7477;
+  --color-pine: #407060;
+  --color-jade: #00aa93;
+  --color-grape: #765ba7;
+  --color-plum: #9e4c6e;
+  --color-watermelon: #f15060;
+  --color-poppy: #ff665e;
+  --color-lagoon: #00838a;
+  --color-peacock: #009da5;
+  --color-lilac: #9d7ad2;
+  --color-moss: #b49f29;
 
   /* One job per family. */
   --font-masthead: "Chango", "Arial Black", sans-serif;
@@ -54,17 +86,21 @@
   --color-charcoal: #343a40;
   --color-charcoal-dark: #242222;
   --color-silver: #a7a9ab;
-  --color-required: #be3144;
-  --color-link: #008cff;
-  --color-link-hover: #4800ff;
-  --color-warning: #ffc107;
-  --color-warning-hover: #ffca2c;
 }
 
 /* Centred, padded container. Max widths come from Tailwind's default breakpoints. */
 @utility container {
   margin-inline: auto;
   padding-inline: 0.75rem;
+}
+
+@utility vertical-text {
+  writing-mode: vertical-rl;
+}
+
+/* Sets the second ink used by the print effects: ink-tangerine, ink-royal, ... */
+@utility ink-* {
+  --ink: --value(--color-*);
 }
 
 /* Base typography: the defaults the site relied on before Tailwind's preflight reset them. */
@@ -170,21 +206,13 @@
   }
 
   a {
-    color: #0d6efd;
+    color: var(--color-ink);
     text-decoration: underline;
-    &:hover {
-      color: #0a58ca;
-    }
   }
 
   [role="button"],
   button:not(:disabled) {
     cursor: pointer;
-  }
-
-  /* Stop the page scrolling behind an open modal dialog. */
-  body:has(dialog[open]) {
-    overflow: hidden;
   }
 }
 
@@ -197,14 +225,6 @@
     border: 1px solid rgb(0 0 0 / 0.175);
     border-radius: 0.375rem;
     background-color: #fff;
-  }
-
-  .text-link {
-    color: var(--color-link);
-    text-decoration: underline;
-    &:hover {
-      color: var(--color-link-hover);
-    }
   }
 
   /* ---- The Savage Gazette: repeated print patterns ---- */
@@ -263,9 +283,94 @@
     background: linear-gradient(transparent 55%, var(--color-yellow) 55%);
   }
 
-  /* Misregistration: hard tomato offset on 1-2 big headlines per page. Never on body or labels. */
+  /* ---- Print effects. Set --ink on the element to change the second colour. ---- */
+
+  /* Misregistration, text: offset second ink on 1-2 big headlines per page. Never on body or labels. */
   .misregister {
-    text-shadow: 3px 3px 0 var(--color-tomato);
+    text-shadow: 3px 3px 0 var(--ink, var(--color-tomato));
+  }
+
+  /* Misregistration, panel: a second colour layer printed slightly off, multiplied over the first. */
+  .misregister-panel {
+    position: relative;
+    isolation: isolate;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      translate: 8px 8px;
+      background-color: var(--ink, var(--color-tomato));
+      mix-blend-mode: multiply;
+    }
+  }
+
+  /* Duotone halftone: grayscale photo screened onto --ink with a faint dot screen, so the product stays readable. Pick a dark ink. Markup: <div class="halftone"><div><img /></div></div>. */
+  .halftone {
+    isolation: isolate;
+    background-color: var(--ink, var(--color-royal));
+    mix-blend-mode: multiply;
+    & > div {
+      position: relative;
+      mix-blend-mode: screen;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, #bbb 0, #fff 70%) 0 0 /
+          6px 6px;
+        mix-blend-mode: multiply;
+      }
+    }
+    & img {
+      display: block;
+      filter: grayscale(1) contrast(1.15);
+    }
+  }
+
+  /* Collapsible card: a <details> whose summary hides the browser marker. Give related cards the same name so one opens at a time. */
+  .fold > summary {
+    list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  /* Ink overlap: print one colour over another; the overlap darkens. */
+  .ink-overlap {
+    mix-blend-mode: multiply;
+  }
+
+  /* Rough edges: wobbles the outline of shapes and illustrations. Never on text or photos. */
+  .rough-edges {
+    filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='r'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.04' numOctaves='3' result='n'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='n' scale='8'/%3E%3C/filter%3E%3C/svg%3E#r");
+  }
+
+  /* Ink noise: unprinted paper specks across a large colour area. */
+  .ink-noise {
+    position: relative;
+    isolation: isolate;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .95 0 0 0 0 .92 0 0 0 0 .82 6 0 0 0 -3.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      opacity: 0.6;
+    }
+  }
+
+  /* Hand-cut line texture, as in the cut-paper Celtic illustrations. Lines take the current text colour. */
+  .motif-lines {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        currentColor 0 2px,
+        transparent 2px 11px
+      ),
+      repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 17px);
   }
 
   /* Bungee Inline feature title: all caps, one per page. */

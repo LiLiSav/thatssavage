@@ -32,6 +32,7 @@ export const irishDate = (now = new Date()) => {
   const date = new Date(Date.UTC(year, month - 1, day));
 
   return {
+    year,
     iso: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`,
     ga: `${days[date.getUTCDay()]}, ${day} ${months[month - 1]} ${year}`,
     en: date.toLocaleDateString("en-IE", {

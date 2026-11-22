@@ -1,19 +1,42 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link } from "@tanstack/react-router";
 import { CheckIcon } from "components/Icons";
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { Resolver, useForm, useWatch } from "react-hook-form";
 import { FormValueTypes } from "types/form";
 import * as yup from "yup";
 
-const controlBase =
-  "block w-full rounded-md border bg-white px-3 py-1.5 text-ink outline-none transition-shadow";
-const controlIdle =
-  "border-[#ced4da] focus:border-[#86b7fe] focus:shadow-[0_0_0_0.25rem_rgb(13_110_253/0.25)]";
-const controlBad = "border-[red] focus:shadow-[0_0_10px_red]";
-const controlGood = "border-[green] focus:shadow-[0_0_10px_green]";
-const label = "mb-2 inline-block font-bold";
-const required = "text-required";
+const fieldControl =
+  "block w-full border-2 border-ink bg-paper px-3 py-2 text-ink placeholder:text-ink/60 aria-invalid:border-tomato aria-invalid:shadow-hard-tomato";
+
+interface FieldProps {
+  id: keyof FormValueTypes;
+  label: string;
+  required?: boolean;
+  invalid: boolean;
+  children: ReactNode;
+}
+
+const Field = ({ id, label, required, invalid, children }: FieldProps) => (
+  <div>
+    <label
+      htmlFor={id}
+      className="mb-2 flex items-center gap-2 font-masthead text-sm uppercase"
+    >
+      {label}
+      {required && <span aria-hidden="true">*</span>}
+      {invalid && (
+        <span
+          aria-hidden="true"
+          className="grid size-5 place-items-center rounded-full bg-tomato text-sm font-bold text-paper"
+        >
+          !
+        </span>
+      )}
+    </label>
+    {children}
+  </div>
+);
 
 const defaultValues: FormValueTypes = {
   name: "",
@@ -59,7 +82,7 @@ export const Form = (props: FormProps) => {
     handleSubmit,
     control,
     setValue,
-    formState: { dirtyFields, errors, isSubmitted, isValid },
+    formState: { errors, isSubmitted, isValid },
   } = useForm<FormValueTypes>({
     defaultValues,
     mode: "onChange",
@@ -76,17 +99,11 @@ export const Form = (props: FormProps) => {
     setValue("subject", `New Form Submission from ${watchName}`);
   }, [watchName, setValue]);
 
-  const inputClass = (field: keyof FormValueTypes) => {
-    if (errors[field]) return `${controlBase} ${controlBad}`;
-    if (dirtyFields[field]) return `${controlBase} ${controlGood}`;
-    return `${controlBase} ${controlIdle}`;
-  };
-
   const submitButton = () => {
     if (loading)
       return (
         <div
-          className="inline-block size-8 animate-spin rounded-full border-4 border-current border-r-transparent [animation-duration:0.75s]"
+          className="inline-block size-6 animate-spin rounded-full border-4 border-current border-r-transparent"
           role="status"
         >
           <span className="sr-only">Loading...</span>
@@ -97,91 +114,77 @@ export const Form = (props: FormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submitForm)} className="grid gap-4">
+    <form onSubmit={handleSubmit(submitForm)} className="grid gap-6">
       <input type="hidden" {...register("from_name")}></input>
       <input type="hidden" {...register("subject")} />
-      {/* NAME */}
-      <div>
-        <label htmlFor="name" className={label}>
-          Name <span className={required}>*</span>
-        </label>
+      <Field id="name" label="Name" required invalid={!!errors.name}>
         <input
           id="name"
           type="text"
-          className={inputClass("name")}
+          className={fieldControl}
           placeholder="John Doe"
+          aria-invalid={!!errors.name}
           {...register("name")}
         />
-      </div>
+      </Field>
 
-      {/* PHONE NUMBER */}
-      <div>
-        <label htmlFor="phone" className={label}>
-          Phone Number
-        </label>
+      <Field id="phone" label="Phone Number" invalid={!!errors.phone}>
         <input
           id="phone"
           type="tel"
-          className={inputClass("phone")}
+          className={fieldControl}
           placeholder="+353 86 123 4567"
+          aria-invalid={!!errors.phone}
           {...register("phone")}
         />
-      </div>
+      </Field>
 
-      {/* EMAIL ADDRESS */}
-      <div>
-        <label htmlFor="email" className={label}>
-          Email Address <span className={required}>*</span>
-        </label>
+      <Field id="email" label="Email Address" required invalid={!!errors.email}>
         <input
           id="email"
           type="email"
-          className={inputClass("email")}
+          className={fieldControl}
           placeholder="you@company.com"
+          aria-invalid={!!errors.email}
           {...register("email")}
         />
-      </div>
+      </Field>
 
-      {/* MESSAGE */}
-      <div>
-        <label htmlFor="message" className={label}>
-          Message <span className={required}>*</span>
-        </label>
+      <Field id="message" label="Message" required invalid={!!errors.message}>
         <textarea
           id="message"
-          className={inputClass("message")}
+          className={fieldControl}
           rows={3}
           placeholder="Please enter your message"
+          aria-invalid={!!errors.message}
           {...register("message")}
         />
-      </div>
+      </Field>
 
-      {/* CHECK */}
       <div>
-        <div className="flex items-start gap-2">
-          <label htmlFor="check">
-            I have read and agree to the{" "}
-            <Link className="text-link" to="/terms-and-conditions">
-              Terms and Conditions
-            </Link>{" "}
-            <span className={required}>*</span>
-          </label>
+        <label
+          htmlFor="check"
+          className="flex min-h-11 items-center gap-3"
+        >
           <input
             id="check"
-            className="order-first mt-1.5 size-4"
+            className="size-5 shrink-0 accent-ink"
             type="checkbox"
             {...register("check")}
           />
-        </div>
-        <p className={required}>* Required</p>
+          <span>
+            I have read and agree to the{" "}
+            <Link to="/terms-and-conditions">Terms and Conditions</Link>{" "}
+            <span aria-hidden="true">*</span>
+          </span>
+        </label>
+        <p className="mb-0 text-sm">* Required</p>
       </div>
-      {/* SUBMIT */}
+
       <div>
         <button
-          className={`mb-1 rounded-md border px-3 py-1.5 text-center disabled:pointer-events-none disabled:opacity-65 ${
-            isSubmitted
-              ? "border-[green] bg-[green] text-white"
-              : "border-warning bg-warning text-black hover:border-warning-hover hover:bg-warning-hover"
+          className={`press-button disabled:pointer-events-none disabled:opacity-60 ${
+            isSubmitted ? "bg-ink text-paper" : ""
           }`}
           type="submit"
           disabled={!isValid || isSubmitted}

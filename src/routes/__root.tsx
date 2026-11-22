@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
 } from "@tanstack/react-router";
+import { Footer } from "components/Footer";
 import { Navbar } from "components/Navbar";
 import type { ReactNode } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -24,7 +25,13 @@ export const Route = createRootRoute({
         title: "That's Savage",
       },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
+      { rel: "icon", href: "/icon-192.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/manifest.json" },
+    ],
   }),
   component: RootComponent,
 });
@@ -39,7 +46,7 @@ function RootComponent() {
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html>
+    <html lang="en">
       <head>
         <HeadContent />
       </head>
@@ -47,6 +54,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <ToastContainer />
         <Navbar />
         <ParallaxProvider>{children}</ParallaxProvider>
+        <Footer />
         <Scripts />
       </body>
     </html>

@@ -3,22 +3,22 @@
   "name": "Thatssavage design website",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "src": "favicon.ico",
+      "sizes": "48x48 32x32 16x16",
+      "type": "image/x-icon"
     },
     {
-      "src": "favicon.png",
+      "src": "icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "favicon.png",
+      "src": "icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/home",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#ffdd17",
   "background_color": "#343a40"

@@ -1,6 +1,16 @@
-# AGENTS.md — That's Savage
+## Modern print culture meets contemporary Celtic editorial design
 
-- Custom garment printing and logo design, based in Monaghan (Muineachán), Ireland.
+- Editorial newspaper layout combined with the texture of independent print publishing. Think contemporary Irish arts magazine, underground culture newspaper and handmade print studio.
+- Bold typography, unusual colour combinations and simplified illustrations.
+- The Celtic influence should come through in the illustration language, decorative motifs and typography rather than making the website look traditionally Celtic or folkloric.
+
+Effect - Application
+Paper grain - Subtle background texture
+Ink overlap - Illustrations and coloured panels
+Misregistration - Slightly offset colour layers
+Halftone - Photographs and portraits
+Rough edges - Illustrations and decorative shapes
+Ink noise - Large colour areas
 
 ## Code
 

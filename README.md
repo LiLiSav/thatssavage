@@ -1,8 +1,10 @@
 <div align="center">
 <a href="https://thatssavage.ie/">
-    <img width="50%" src="public/Logo.png" />
+    <img width="50%" src="public/Name.png" />
 </a>
 </div>
+
+Custom garment printing and logo design, based in Monaghan (Muineachán), Ireland.
 
 <a href="https://thatssavage.ie/" style="text-decoration: none; color: white">
 That's Savage
@@ -10,13 +12,23 @@ That's Savage
 
 ## Development
 
-- `npm start`: Local development on server http://localhost:5173/.
-- `npm run deploy`: Uses gh-pages to build the project and deploy on Github with our own domain.
+Install dependencies, then start the dev server:
+
+```bash
+pnpm install
+pnpm dev
+```
+
+The app runs at http://localhost:3005.
 
 ## Deployment
 
-- `npm run build`: Run this and check if everything looks as expected by running `npm run preview`.
-- `npm run deploy`: if the preview looks good, deploy it.
+```bash
+pnpm build
+pnpm preview
+```
+
+`pnpm build` typechecks and builds the site. `pnpm preview` serves that production build locally. Production deploys to Netlify.
 
 ## Contributors
 
