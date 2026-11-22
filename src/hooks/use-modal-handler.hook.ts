@@ -1,13 +1,8 @@
-import { Modal } from "bootstrap";
-import { useEffect, useState } from "react";
-
 export const useModal = (id: string) => {
-  const [modal, setModal] = useState<Modal>();
+  const show = () => {
+    const dialog = document.getElementById(id);
+    if (dialog instanceof HTMLDialogElement) dialog.showModal();
+  };
 
-  useEffect(() => {
-    const element = document.getElementById(id);
-    if (element) setModal(new Modal(element));
-  }, [id]);
-
-  return { modal };
+  return { show };
 };

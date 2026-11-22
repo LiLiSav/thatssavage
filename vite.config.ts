@@ -1,13 +1,10 @@
-import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import react from "@vitejs/plugin-react";
-import viteTsconfigPaths from "vite-tsconfig-paths";
-import svgrPlugin from "vite-plugin-svgr";
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
-  base: "/",
-  server: {
-    port: 3005,
-  },
+  plugins: [tanstackStart(), react(), tailwindcss()],
+  resolve: { tsconfigPaths: true },
+  server: { port: 3005 },
 });

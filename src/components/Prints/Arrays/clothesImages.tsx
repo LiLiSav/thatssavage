@@ -1,13 +1,13 @@
-import clock from "assets/prints/clothes/oclock.jpg";
+import hen from "assets/prints/clothes/amyHen.jpg";
+import teddy from "assets/prints/clothes/aoifeBirthday.jpg";
+import birthday from "assets/prints/clothes/birthday.jpg";
 import colorBlind from "assets/prints/clothes/colourblind.jpg";
 import fixIt from "assets/prints/clothes/fixit.jpg";
+import stag from "assets/prints/clothes/micksStag.jpg";
+import clock from "assets/prints/clothes/oclock.jpg";
 import tag from "assets/prints/clothes/tagMeGently.jpg";
 import tiktok from "assets/prints/clothes/tiktok.jpg";
-import stag from "assets/prints/clothes/micksStag.jpg";
-import hen from "assets/prints/clothes/amyHen.jpg";
-import birthday from "assets/prints/clothes/birthday.jpg";
-import teddy from "assets/prints/clothes/aoifeBirthday.jpg";
-import { ImageBlockProps } from "pages/Prints";
+import { ImageBlockProps } from "types/data";
 
 export const clothesImages: ImageBlockProps[] = [
   { img: clock, alt: "bad bitch oclock" },

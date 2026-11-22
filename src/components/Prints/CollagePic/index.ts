@@ -1,1 +1,0 @@
-export { CollagePic } from "./CollagePic";

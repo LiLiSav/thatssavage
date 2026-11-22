@@ -1,22 +1,31 @@
 {
-  "editor.bracketPairColorization.enabled": true,
-  "editor.fontSize": 13,
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.printWidth": 100,
-  "eslint.enable": true,
-  "eslint.format.enable": true,
-  "eslint.options": {
-    "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.validate": ["markdown", "mdx", "javascript", "typescript", "typescriptreact"],
-  "files.eol": "\r\n",
-  "files.associations": {
-    "*.mdx": "markdown"
-  }
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "js/ts.preferences.importModuleSpecifier": "non-relative"
 }
