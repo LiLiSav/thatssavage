@@ -12,13 +12,15 @@ export const Fold = ({ name, tint, summary, children }: FoldProps) => (
     <summary
       className={`${tint} ink-noise flex cursor-pointer items-center gap-4 p-4 hover:bg-ink hover:text-paper`}
     >
-      <div className="flex flex-1 items-center gap-4">{summary}</div>
+      <div className="flex flex-col xs:flex-row flex-1 xs:items-center gap-4">
+        {summary}
+      </div>
       <span
         aria-hidden="true"
-        className="flex size-10 shrink-0 items-center justify-center border-2 border-current font-masthead text-2xl leading-none"
+        className="flex size-6 shrink-0 items-center justify-center border-2 border-current font-masthead text-xl leading-none xs:text-2xl"
       >
         <span className="group-open:hidden">+</span>
-        <span className="hidden group-open:inline">−</span>
+        <span className="hidden group-open:inline">{"\u2212"}</span>
       </span>
     </summary>
     <div className="border-t-2 border-ink bg-paper p-4">{children}</div>

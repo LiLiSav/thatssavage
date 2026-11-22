@@ -30,7 +30,19 @@ const faqs = [
 
 const panel = "ink-noise border-ink p-6";
 
+const title = "About | That's Savage";
+const description =
+  "Custom print garments and logo design from Monaghan, with over 10 years at it and no minimum order.";
+
 export const Route = createFileRoute("/about")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+    ],
+  }),
   component: AboutRoute,
 });
 

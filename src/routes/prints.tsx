@@ -4,7 +4,7 @@ import fitnessCollage from "assets/prints/fitness/collage.jpg";
 import miscCollage from "assets/prints/misc/bottles.jpg";
 import maskCollage from "assets/prints/otherwear/masks.jpg";
 import workWearCollage from "assets/prints/workwear/collage.jpg";
-import { CollagePic } from "components/Prints/CollagePic";
+import { CollagePic } from "components/collage-pic";
 import {
   clothesImages,
   fitnessImages,
@@ -54,11 +54,23 @@ const collagePics = [
   },
 ];
 
+const title = "Prints | That's Savage";
+const description =
+  "Party prints, club and fitness kits, outerwear, workwear, and one-off bits like bottles and bags.";
+
 export const Route = createFileRoute("/prints")({
-  component: RouteComponent,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+    ],
+  }),
+  component: PrintsRoute,
 });
 
-function RouteComponent() {
+function PrintsRoute() {
   return (
     <main className="mx-auto w-full max-w-sheet px-gutter pb-12">
       <header className="py-8">

@@ -5,7 +5,19 @@ import { SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
 import { FormSubmission, FormValueTypes } from "types/form";
 
+const title = "Contact | That's Savage";
+const description =
+  "Ask for a quote or send a question. That's Savage in Monaghan will get back to you.";
+
 export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+    ],
+  }),
   component: ContactRoute,
 });
 

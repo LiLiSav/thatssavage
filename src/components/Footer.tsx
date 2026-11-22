@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { PinIcon } from "components/Icons";
-import { irishDate } from "utils/irishDate";
+import { irishDate } from "utils/irish-date";
 
 const item =
   "flex min-h-11 items-center gap-2 text-ink no-underline hover:text-ink hover:underline [&_svg]:size-6 [&_svg]:shrink-0";

@@ -1,7 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { irishDate } from "utils/irishDate";
-import { contents, PageEntry, pageLabel } from "./pages";
+import { irishDate } from "utils/irish-date";
 
 interface NavItemProps {
   item: PageEntry;
@@ -10,7 +9,24 @@ interface NavItemProps {
   collapsed: boolean;
 }
 
-const sheet = "mx-auto w-full max-w-sheet px-gutter";
+interface PageEntry {
+  name: string;
+  link: string;
+}
+
+const contents: PageEntry[] = [
+  { name: "Home", link: "/" },
+  { name: "Prints", link: "/prints" },
+  { name: "About", link: "/about" },
+  { name: "Contact", link: "/contact" },
+];
+
+const pageLabel = (pathname: string) => {
+  const index = contents.findIndex((page) => page.link === pathname);
+  return `P.${index === -1 ? contents.length + 1 : index + 1}`;
+};
+
+const sheet = "mx-auto w-full max-w-sheet sm:px-gutter";
 const smallLabel = "font-label text-sm tracking-label";
 
 const tints = ["bg-lemon", "bg-aqua", "bg-salmon", "bg-chartreuse"];
@@ -74,7 +90,7 @@ export const Navbar = () => {
         <div ref={mastheadRef} className={`${sheet} pt-4 pb-2`}>
           <div className="grid grid-cols-2 items-center gap-x-4 gap-y-2 lg:grid-cols-[auto_1fr_auto]">
             <div
-              className={`${smallLabel} order-1 border-2 border-ink px-3 py-2 uppercase`}
+              className={`${smallLabel} w-fit order-1 border-2 border-ink px-3 py-2 uppercase`}
             >
               <img
                 src="/celtic.png"
@@ -121,7 +137,9 @@ export const Navbar = () => {
         <div className={`${sheet} flex items-center gap-4`}>
           <ul
             className={`m-0 grid w-full list-none gap-px border-2 border-ink bg-ink p-0 ${
-              collapsed ? "grid-cols-4" : "grid-cols-2 md:grid-cols-4"
+              collapsed
+                ? "grid-cols-[auto_auto_auto_1fr] xs:grid-cols-4"
+                : "grid-cols-2 md:grid-cols-4"
             }`}
           >
             {contents.map((item, index) => (

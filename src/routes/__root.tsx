@@ -6,10 +6,16 @@ import {
 } from "@tanstack/react-router";
 import { Footer } from "components/Footer";
 import { Navbar } from "components/Navbar";
+import { NotFound } from "components/not-found";
 import type { ReactNode } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { ToastContainer } from "react-toastify";
 import appCss from "styles/index.css?url";
+
+const title = "That's Savage";
+const description =
+  "Custom garment printing and graphic design from Monaghan. No minimum order — one hoodie or a hundred.";
+const image = "https://thatssavage.ie/self-portrait.png";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -21,9 +27,13 @@ export const Route = createRootRoute({
         name: "viewport",
         content: "width=device-width, initial-scale=1",
       },
-      {
-        title: "That's Savage",
-      },
+      { title },
+      { name: "description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:image", content: image },
+      { name: "image", content: image },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -34,6 +44,7 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
+  notFoundComponent: NotFound,
 });
 
 function RootComponent() {

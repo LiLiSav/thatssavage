@@ -1,5 +1,5 @@
-export { clothesImages } from "./clothesImages";
-export { fitnessImages } from "./fitnessImages";
-export { miscArray } from "./miscArray";
-export { otherWear } from "./otherWear";
-export { workWear } from "./workWear";
+export { clothesImages } from "./clothes-images";
+export { fitnessImages } from "./fitness-images";
+export { miscArray } from "./misc-array";
+export { otherWear } from "./other-wear";
+export { workWear } from "./work-wear";

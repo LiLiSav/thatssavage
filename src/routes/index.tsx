@@ -4,7 +4,7 @@ import clonmany from "assets/customers/clonmany.jpg";
 import country from "assets/customers/country-fit.jpg";
 import disney from "assets/customers/disney.jpg";
 import keren from "assets/customers/keren-hen.jpg";
-import { cards } from "components/Home/cardArray";
+import { cards } from "content/card-array";
 
 const customers = [
   { img: bride, label: "Bride in white on steps" },

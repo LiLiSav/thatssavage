@@ -86,6 +86,8 @@
   --color-charcoal: #343a40;
   --color-charcoal-dark: #242222;
   --color-silver: #a7a9ab;
+
+  --breakpoint-xs: 30rem; /* 480px */
 }
 
 /* Centred, padded container. Max widths come from Tailwind's default breakpoints. */

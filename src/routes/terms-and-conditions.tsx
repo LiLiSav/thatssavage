@@ -1,10 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+const title = "Terms and Conditions | That's Savage";
+const description =
+  "Terms for using the That's Savage website and ordering printed garments.";
+
 export const Route = createFileRoute("/terms-and-conditions")({
-  component: RouteComponent,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+    ],
+  }),
+  component: TermsRoute,
 });
 
-function RouteComponent() {
+function TermsRoute() {
   return (
     <div className="container shadow p-5 mb-3 mt-3 card">
       <h1>Terms and Conditions</h1>
