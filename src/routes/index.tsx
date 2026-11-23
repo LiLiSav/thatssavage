@@ -78,7 +78,7 @@ function HomeRoute() {
               <span className="highlight">rules</span> in life.
             </h1>
             <p className="mb-6 max-w-prose text-xl italic">
-              One hoodie or a hundred,the answer is yes. This is showbiz baby!
+              One hoodie or a hundred, the answer is yes. This is showbiz baby!
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link to="/prints" className={pageRef}>
@@ -115,8 +115,8 @@ function HomeRoute() {
           <h2 className="mb-3 text-2xl">Irish Owned</h2>
           <p>
             We take pride in where we are from and what we do. By supporting us
-            you are supporting local. We guarantee that what we produce is at
-            the very highest standard and you know exactly where it comes from.
+            you are supporting local. Tabhair aire duit féin (look after
+            yourself) and skip the mega online marketplaces.
           </p>
           <Link to="/about" className={pageRef}>
             About us, P.3
@@ -163,6 +163,25 @@ function HomeRoute() {
               </figcaption>
             </figure>
           ))}
+          <figure className="col-span-2 m-0 lg:col-span-6 lg:-rotate-1">
+            <div className="ink-noise ink-plum flex flex-col border-2 border-ink bg-chartreuse p-6 lg:aspect-2/1">
+              <div className="flex flex-1 flex-col justify-between gap-8">
+                <div className="flex items-start justify-between gap-4">
+                  <p className="kicker w-fit">Coming soon</p>
+                  <div
+                    aria-hidden="true"
+                    className="rough-edges ink-overlap size-16 shrink-0 rounded-full bg-plum lg:size-24"
+                  />
+                </div>
+                <p className="headline misregister mb-0 text-3xl sm:text-4xl">
+                  Irish sayings on paper
+                </p>
+              </div>
+            </div>
+            <figcaption className="mt-1 font-label text-sm tracking-label uppercase">
+              Fig. 10 — Lino prints
+            </figcaption>
+          </figure>
         </div>
         <Link
           to="/prints"

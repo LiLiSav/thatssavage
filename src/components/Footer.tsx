@@ -78,8 +78,8 @@ export const Footer = () => (
               rel="noreferrer"
             >
               Liam
-            </a>{" "}
-            and{" "}
+            </a>
+            {" & "}
             <a
               className="text-ink hover:text-ink"
               href="https://www.linkedin.com/in/michaelssavage/"
