@@ -165,16 +165,19 @@ function HomeRoute() {
           ))}
           <figure className="col-span-2 m-0 lg:col-span-6 lg:-rotate-1">
             <div className="ink-noise ink-plum flex flex-col border-2 border-ink bg-chartreuse p-6 lg:aspect-2/1">
-              <div className="flex flex-1 flex-col justify-between gap-8">
+              <div className="flex flex-1 flex-col justify-between gap-4">
                 <div className="flex items-start justify-between gap-4">
-                  <p className="kicker w-fit">Coming soon</p>
+                  <p className="kicker w-fit">Irish sayings on paper</p>
                   <div
                     aria-hidden="true"
                     className="rough-edges ink-overlap size-16 shrink-0 rounded-full bg-plum lg:size-24"
                   />
                 </div>
-                <p className="headline misregister mb-0 text-3xl sm:text-4xl">
-                  Irish sayings on paper
+                <p className="headline misregister-2 mb-0 text-3xl sm:text-4xl">
+                  Be Grand Hi!
+                </p>
+                <p className="headline misregister-3 mb-0 text-3xl sm:text-4xl">
+                  That&apos;s a Holy Tarra
                 </p>
               </div>
             </div>

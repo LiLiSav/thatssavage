@@ -292,6 +292,14 @@
     text-shadow: 3px 3px 0 var(--ink, var(--color-tomato));
   }
 
+  .misregister-2 {
+    text-shadow: 3px 3px 0 var(--denim, var(--color-flamingo));
+  }
+
+  .misregister-3 {
+    text-shadow: 3px 3px 0 var(--tangerine, var(--color-jade));
+  }
+
   /* Misregistration, panel: a second colour layer printed slightly off, multiplied over the first. */
   .misregister-panel {
     position: relative;
