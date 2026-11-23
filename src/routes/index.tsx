@@ -182,7 +182,7 @@ function HomeRoute() {
               </div>
             </div>
             <figcaption className="mt-1 font-label text-sm tracking-label uppercase">
-              Fig. 10 — Lino prints
+              Fig. 10 — Poster prints
             </figcaption>
           </figure>
         </div>
